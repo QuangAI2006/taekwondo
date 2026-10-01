@@ -1,0 +1,34 @@
+{
+  "source_workbook": "<DESKTOP>\\Sensors_Submission_Package_20260524_081544\\source_backups\\human_ai_agreement.xlsx",
+  "n": 30,
+  "icc_a_3": 0.9145783967044583,
+  "icc_a_3_bootstrap_ci": [
+    0.8495039590907691,
+    0.9491876581625565
+  ],
+  "classification_accuracy_vs_expert_majority": 0.8333333333333334,
+  "cohen_kappa": 0.7500000000000001,
+  "spearman_rho": 0.6266093633083559,
+  "spearman_permutation_p": 0.00039998000099995,
+  "spearman_bootstrap_ci": [
+    0.3167686353804767,
+    0.8388496246545328
+  ],
+  "pearson_r": 0.6060205332111114,
+  "pearson_permutation_p": 0.0005499725013749313,
+  "pearson_bootstrap_ci": [
+    0.3328204581567475,
+    0.8354655278874341
+  ],
+  "mae": 0.6011111111111113,
+  "mse": 0.5136666666666667,
+  "bland_altman_bias": 0.34111111111111114,
+  "bland_altman_loa_low": -0.9154464283847359,
+  "bland_altman_loa_high": 1.5976686506069582,
+  "bland_altman_coverage": 0.9333333333333333,
+  "per_class_mae": {
+    "front": 0.5300000000000005,
+    "roundhouse": 0.7333333333333333,
+    "axe": 0.5399999999999998
+  }
+}

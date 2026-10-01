@@ -1,0 +1,7 @@
+Table 3. Model architecture and training configuration
+
+| Model | Input | Architecture | Dropout | Parameters | Training |
+| --- | --- | --- | --- | --- | --- |
+| BiLSTM | 96 x 52 | hidden = 128, bidirectional, layers = 2 | 0.2 | 582,403 | Adam, lr = 1e-3, batch = 8, epochs = 40 |
+| GCN | 96 x 52 | spatial skeleton GCN, d_model = 64, layers = 2 | 0.2 | 171,203 | Adam, lr = 1e-3, batch = 8, epochs = 40 |
+| Transformer | 96 x 52 | d_model = 128, layers = 2, heads = 4, FFN = 256 | 0.2 | 272,387 | Adam, lr = 1e-3, batch = 8, epochs = 40, label smoothing = 0.05 |

@@ -1,0 +1,22 @@
+[INFO] ckpt=sample_transformer_phase_seed0.pt device=cpu state_dict_from=model
+[INFO] hparams: in_dim=52 d_model=128 nhead=4 num_layers=2 dropout=0.2 frames=96
+[INFO] split=val align=phase decision=two_pass
+[INFO] evaluated samples=104 acc=0.635 (skipped_invalid=0)
+
+Per-class metrics:
+  front      precision=0.641  recall=0.658  support=38
+  roundhouse precision=0.471  recall=0.640  support=25
+  axe        precision=0.806  recall=0.610  support=41
+
+Predicted distribution:
+  front      n=  39  ratio=0.375
+  roundhouse n=  34  ratio=0.327
+  axe        n=  31  ratio=0.298
+
+Confusion Matrix (rows=true, cols=pred):
+                     front  roundhouse         axe
+front                   25           9           4
+roundhouse               7          16           2
+axe                      7           9          25
+<PROJECT_ROOT>\scripts\eval_val_confusion_v3.py:101: RuntimeWarning: Mean of empty slice
+  cm = np.nanmean(pts_m[m3], axis=1)

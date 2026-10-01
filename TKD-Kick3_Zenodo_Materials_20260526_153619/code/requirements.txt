@@ -1,0 +1,8 @@
+numpy
+torch
+matplotlib
+opencv-python
+mediapipe==0.10.14
+pandas
+scikit-learn
+python-docx

@@ -1,0 +1,16 @@
+[INFO] ckpt=sample_gcn_phase_seed1.pt device=cpu model_type=gcn
+[INFO] split=val align=phase decision=sweep
+[INFO] evaluated samples=104 acc=0.500 (skipped_invalid=0, skipped_no_label=0)
+
+Per-class metrics:
+  front      precision=0.500  recall=0.684  f1=0.578  support=38
+  roundhouse precision=0.474  recall=0.360  f1=0.409  support=25
+  axe        precision=0.515  recall=0.415  f1=0.459  support=41
+
+Macro-F1=0.482  Weighted-F1=0.491  BalancedAcc=0.486
+
+Confusion Matrix (rows=true, cols=pred):
+                   front  roundhouse         axe
+front                 26           5           7
+roundhouse             7           9           9
+axe                   19           5          17

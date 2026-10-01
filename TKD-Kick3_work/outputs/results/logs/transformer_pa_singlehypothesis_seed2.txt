@@ -1,0 +1,22 @@
+[INFO] ckpt=sample_transformer_phase_seed2.pt device=cpu state_dict_from=model
+[INFO] hparams: in_dim=52 d_model=128 nhead=4 num_layers=2 dropout=0.2 frames=96
+[INFO] split=val align=phase decision=two_pass
+[INFO] evaluated samples=104 acc=0.683 (skipped_invalid=0)
+
+Per-class metrics:
+  front      precision=0.676  recall=0.658  support=38
+  roundhouse precision=0.517  recall=0.600  support=25
+  axe        precision=0.816  recall=0.756  support=41
+
+Predicted distribution:
+  front      n=  37  ratio=0.356
+  roundhouse n=  29  ratio=0.279
+  axe        n=  38  ratio=0.365
+
+Confusion Matrix (rows=true, cols=pred):
+                     front  roundhouse         axe
+front                   25          10           3
+roundhouse               6          15           4
+axe                      6           4          31
+E:\martial arts\tkd\TKD-Kick3_work\scripts\eval_val_confusion_v3.py:101: RuntimeWarning: Mean of empty slice
+  cm = np.nanmean(pts_m[m3], axis=1)

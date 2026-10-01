@@ -1,0 +1,17 @@
+﻿metric,value,ci_low,ci_high,unit
+n,30,,,videos
+"ICC(A,3)",0.9145783967044583,0.8495039590907691,0.9491876581625565,
+classification_accuracy_vs_expert_majority,0.8333333333333334,,,proportion
+classification_correct,25,,,videos
+Cohen_kappa,0.7500000000000001,,,
+Spearman_rho,0.6266093633083559,0.3167686353804767,0.8388496246545328,permutation_p=0.000400
+Pearson_r,0.6060205332111114,0.3328204581567475,0.8354655278874341,permutation_p=0.000550
+MAE,0.6011111111111113,,,points
+MSE,0.5136666666666667,,,points^2
+Bland_Altman_bias_machine_minus_expert,0.34111111111111114,,,points
+Bland_Altman_LOA_low,-0.9154464283847359,,,points
+Bland_Altman_LOA_high,1.5976686506069582,,,points
+Bland_Altman_coverage,0.9333333333333333,,,proportion
+MAE_front,0.5300000000000005,,,points
+MAE_roundhouse,0.7333333333333333,,,points
+MAE_axe,0.5399999999999998,,,points

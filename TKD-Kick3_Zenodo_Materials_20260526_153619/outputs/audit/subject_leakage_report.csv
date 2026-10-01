@@ -1,0 +1,10 @@
+check,result,evidence,interpretation
+participant_id_available,no,"No participant-like field in active NPZ files; no metadata table found","Subject-independent evaluation cannot be claimed yet"
+train_validation_participant_overlap,not_testable,"Participant identifiers unavailable","Requires participant_id mapping"
+train_test_participant_overlap,not_testable,"Participant identifiers unavailable","Requires participant_id mapping"
+validation_test_participant_overlap,not_testable,"Participant identifiers unavailable","Requires participant_id mapping"
+filename_stem_overlap,present,"Several same stems occur across splits, including test examples and roundhouse_0061-0063 between train/val","Not proof of leakage, but increases concern because participant IDs are absent"
+identical_npz_hash_overlap,none_detected,"SHA-256 comparison across active duplicate stems found no identical files","No byte-level duplicate leakage detected"
+duplicate_src_video_overlap,none_detected,"No duplicated src_video values among 752 sequences with src_video","Cannot cover the 13 test examples lacking src_video"
+test_set_independence,not_supported,"13 test sequences lack src_video/quality metadata and participant IDs","Treat as release/examples, not formal independent test set"
+

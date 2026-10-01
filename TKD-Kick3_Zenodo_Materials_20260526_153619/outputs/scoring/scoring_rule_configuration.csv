@@ -1,0 +1,17 @@
+﻿kick_type,component,code,item,max_points,implementation,raw_metric_or_range,note
+front,accuracy,FR_A1,Chamber/lift before extension and straight kicking path,1.6,"1.6 * (0.60 * map(knee_lift_vertical, 0.04, 0.12) + 0.40 * map(straightness, 0.72, 0.96))",knee_lift_vertical; straightness,Front-kick specific item.
+front,accuracy,FR_A2,Kick height and peak knee extension,1.2,"1.2 * (0.55 * map(height_raw, 0.15, 0.65) + 0.45 * map(kick_knee_angle_peak, 135 deg, 175 deg))",height_raw; kick_knee_angle_peak,Uses code threshold ranges rather than prose-only manuscript weights.
+front,accuracy,FR_A3,Recovery to the initial position,0.8,"0.8 * map(recovery_ratio, 0.25, 0.75)",recovery_ratio,Shared recovery logic across kicks.
+front,accuracy,FR_A4,Body stability and hand guard,0.4,"0.4 * (0.65 * map(stability, 0.35, 0.80) + 0.35 * (1 - hand_guard_drop / 0.25))",stability; hand_guard_drop,Minor accuracy component.
+roundhouse,accuracy,RH_A1,Kicking-plane alignment and path straightness,1.6,"1.6 * (0.70 * map(30 - roundhouse_align_dev_deg, 5, 25) + 0.30 * map(straightness, 0.70, 0.95))",roundhouse_align_dev_deg; straightness,Roundhouse-kick specific alignment item.
+roundhouse,accuracy,RH_A2,Kick height and peak knee extension,1.2,"1.2 * (0.55 * map(height_raw, 0.15, 0.65) + 0.45 * map(kick_knee_angle_peak, 135 deg, 175 deg))",height_raw; kick_knee_angle_peak,Same height and extension structure as front kick.
+roundhouse,accuracy,RH_A3,Recovery to the initial position,0.8,"0.8 * map(recovery_ratio, 0.25, 0.75)",recovery_ratio,Shared recovery logic across kicks.
+roundhouse,accuracy,RH_A4,Body stability and landing control,0.4,"0.4 * (0.60 * map(stability, 0.35, 0.80) + 0.40 * map(landing_forward, -0.08, 0.08))",stability; landing_forward,Minor accuracy component.
+axe,accuracy,AX_A1,Leg-lift height and upward path,1.6,"1.6 * (0.55 * map(height_raw, 0.15, 0.65) + 0.45 * map(straightness, 0.70, 0.95))",height_raw; straightness,Axe-kick specific upward phase item.
+axe,accuracy,AX_A2,Downward speed,1.2,"1.2 * map(down_speed, 0.20, 0.90)",down_speed,Axe-kick specific downward phase item.
+axe,accuracy,AX_A3,Recovery to the initial position,0.8,"0.8 * map(recovery_ratio, 0.25, 0.75)",recovery_ratio,Shared recovery logic across kicks.
+axe,accuracy,AX_A4,Body stability and hand guard,0.4,"0.4 * (0.60 * map(stability, 0.35, 0.80) + 0.40 * (1 - hand_guard_drop / 0.25))",stability; hand_guard_drop,Minor accuracy component.
+all,expression,EX_E1,Speed,2.0,"2.0 * map(speed_raw, 0.20, 0.75)",speed_raw,Common expression item.
+all,expression,EX_E2,Kinematic vigor index,1.6,"1.6 * map(power_raw, 0.18, 0.70)",power_raw in active scoring_api.py is peak normalized ankle velocity; legacy scoring_rules.py used a speed-acceleration composite.,Do not call this biomechanical power; use kinematic vigor index or impact-speed proxy.
+all,expression,EX_E3,Height,1.4,"1.4 * map(height_raw, 0.15, 0.65)",height_raw,Common expression item.
+all,expression,EX_E4,Smoothness,1.0,"1.0 * map(smoothness, 0.45, 0.85)",smoothness,Common expression item based on trajectory smoothness.

@@ -1,0 +1,5 @@
+﻿split,front,roundhouse,axe,total
+train,245,159,244,648
+val,38,25,41,104
+test,5,6,2,13
+all,288,190,287,765

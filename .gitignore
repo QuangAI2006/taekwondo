@@ -1,0 +1,18 @@
+# Python environment / cache (several GB, machine-specific)
+.venv/
+.venv311/
+__pycache__/
+*.pyc
+
+# Videos: raw clips and rendered visualizations show identifiable people
+# (AGENTS.md rule 5: no raw videos / identifiable participant images in a public repo)
+*.mp4
+*.MP4
+*.mov
+*.MOV
+*.avi
+*.mkv
+
+# Per-video inference outputs (frames of the performer in peak.png, pose files)
+TKD-Kick3_work/outputs/predictions/
+TKD-Kick3_work/outputs/predictions_kick4/

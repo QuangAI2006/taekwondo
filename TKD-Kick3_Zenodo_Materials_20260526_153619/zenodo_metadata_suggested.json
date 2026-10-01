@@ -1,0 +1,37 @@
+{
+  "title": "TKD-Kick3: De-identified pose sequences, code, and experiment outputs for smartphone-video taekwondo kick recognition and scoring",
+  "upload_type": "dataset",
+  "description": "Public de-identified derived materials for a smartphone-video-based taekwondo kick recognition and scoring study. The package includes sanitized 13-keypoint MediaPipe pose sequences, code, trained recognition checkpoints, recognition metrics, scoring-rule audit outputs, expert-agreement analysis, runtime measurements, and manuscript-ready result tables. Raw videos, identifiable participant images, signed ethics forms, and local absolute source video paths are excluded.",
+  "creators": [
+    {
+      "name": "Wang, Zenan",
+      "affiliation": "Dankook University"
+    },
+    {
+      "name": "Sun, Shuo",
+      "affiliation": "Huzhou University"
+    },
+    {
+      "name": "Liang, Xilin",
+      "affiliation": "Zhejiang Business College"
+    },
+    {
+      "name": "Chen, Linhua",
+      "affiliation": "Dankook University"
+    }
+  ],
+  "keywords": [
+    "taekwondo",
+    "smartphone video",
+    "pose estimation",
+    "action recognition",
+    "action quality assessment",
+    "MediaPipe",
+    "LSTM"
+  ],
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "version": "1.0.0",
+  "publication_date": "2026-05-26",
+  "notes": "Participant identifiers are unavailable; recognition results are sample-level validation results and should not be described as subject-independent."
+}

@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use these materials, please cite the Zenodo record and the associated manuscript."
+title: "TKD-Kick3: De-identified pose sequences, code, and experiment outputs for smartphone-video taekwondo kick recognition and scoring"
+type: dataset
+authors:
+  - family-names: Wang
+    given-names: Zenan
+    affiliation: Dankook University
+  - family-names: Sun
+    given-names: Shuo
+    affiliation: Huzhou University
+  - family-names: Liang
+    given-names: Xilin
+    affiliation: Zhejiang Business College
+  - family-names: Chen
+    given-names: Linhua
+    affiliation: Dankook University
+keywords:
+  - taekwondo
+  - action recognition
+  - pose estimation
+  - smartphone video
+  - action quality assessment
+license: CC-BY-4.0
+version: "1.0.0"
+date-released: "2026-05-26"
+repository-code: "TBD"
+doi: "TBD"

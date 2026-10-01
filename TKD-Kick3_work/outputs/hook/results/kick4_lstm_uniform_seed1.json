@@ -1,0 +1,148 @@
+{
+  "checkpoint": "models\\checkpoints\\kick4_hook\\kick4_lstm_uniform_seed1.pt",
+  "model": "lstm",
+  "align": "uniform",
+  "seed": 1,
+  "best_epoch": 39,
+  "epochs": 40,
+  "batch_size": 8,
+  "lr": 0.001,
+  "dropout": 0.2,
+  "selection": "best val balanced accuracy",
+  "train_counts": {
+    "front": 245,
+    "roundhouse": 159,
+    "axe": 244,
+    "hook_right": 16
+  },
+  "elapsed_sec": 253.2,
+  "val": {
+    "n": 108,
+    "accuracy": 0.7407407407407407,
+    "balanced_accuracy": 0.7991142490372272,
+    "macro_f1": 0.7917989417989418,
+    "per_class": {
+      "front": {
+        "precision": 0.75,
+        "recall": 0.631578947368421,
+        "f1": 0.6857142857142857,
+        "support": 38
+      },
+      "roundhouse": {
+        "precision": 0.59375,
+        "recall": 0.76,
+        "f1": 0.6666666666666666,
+        "support": 25
+      },
+      "axe": {
+        "precision": 0.825,
+        "recall": 0.8048780487804879,
+        "f1": 0.8148148148148149,
+        "support": 41
+      },
+      "hook_right": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      }
+    },
+    "confusion_matrix": [
+      [
+        24,
+        9,
+        5,
+        0
+      ],
+      [
+        4,
+        19,
+        2,
+        0
+      ],
+      [
+        4,
+        4,
+        33,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4
+      ]
+    ],
+    "classes": [
+      "front",
+      "roundhouse",
+      "axe",
+      "hook_right"
+    ]
+  },
+  "test": {
+    "n": 17,
+    "accuracy": 0.5294117647058824,
+    "balanced_accuracy": 0.5,
+    "macro_f1": 0.3888888888888889,
+    "per_class": {
+      "front": {
+        "precision": 0.38461538461538464,
+        "recall": 1.0,
+        "f1": 0.5555555555555556,
+        "support": 5
+      },
+      "roundhouse": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 6
+      },
+      "axe": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 2
+      },
+      "hook_right": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      }
+    },
+    "confusion_matrix": [
+      [
+        5,
+        0,
+        0,
+        0
+      ],
+      [
+        6,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4
+      ]
+    ],
+    "classes": [
+      "front",
+      "roundhouse",
+      "axe",
+      "hook_right"
+    ]
+  },
+  "protocol_note": "sample-level split; participant identifiers unavailable; all hook_right clips come from one source video / one performer"
+}

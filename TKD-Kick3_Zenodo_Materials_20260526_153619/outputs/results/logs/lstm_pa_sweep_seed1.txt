@@ -1,0 +1,16 @@
+[INFO] ckpt=sample_lstm_phase_seed1.pt device=cpu model_type=lstm
+[INFO] split=val align=phase decision=sweep
+[INFO] evaluated samples=104 acc=0.721 (skipped_invalid=0, skipped_no_label=0)
+
+Per-class metrics:
+  front      precision=0.750  recall=0.632  f1=0.686  support=38
+  roundhouse precision=0.621  recall=0.720  f1=0.667  support=25
+  axe        precision=0.767  recall=0.805  f1=0.786  support=41
+
+Macro-F1=0.713  Weighted-F1=0.721  BalancedAcc=0.719
+
+Confusion Matrix (rows=true, cols=pred):
+                   front  roundhouse         axe
+front                 24           7           7
+roundhouse             4          18           3
+axe                    4           4          33

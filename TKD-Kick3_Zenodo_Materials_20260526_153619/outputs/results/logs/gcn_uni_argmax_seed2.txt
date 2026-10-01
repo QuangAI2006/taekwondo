@@ -1,0 +1,16 @@
+[INFO] ckpt=sample_gcn_uniform_seed2.pt device=cpu model_type=gcn
+[INFO] split=val align=uniform decision=argmax
+[INFO] evaluated samples=104 acc=0.500 (skipped_invalid=0, skipped_no_label=0)
+
+Per-class metrics:
+  front      precision=0.474  recall=0.474  f1=0.474  support=38
+  roundhouse precision=0.444  recall=0.640  f1=0.525  support=25
+  axe        precision=0.600  recall=0.439  f1=0.507  support=41
+
+Macro-F1=0.502  Weighted-F1=0.499  BalancedAcc=0.518
+
+Confusion Matrix (rows=true, cols=pred):
+                   front  roundhouse         axe
+front                 18          11           9
+roundhouse             6          16           3
+axe                   14           9          18

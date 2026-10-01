@@ -1,0 +1,2 @@
+﻿video_file,sequence_path,participant_id,kick_label,attempt_id,teaching_class
+<private_video_filename>,data/processed_pose_sequences/train/front/<sequence_id>.npz,<participant_id_if_available>,front,<attempt_id>,<class_id_if_available>

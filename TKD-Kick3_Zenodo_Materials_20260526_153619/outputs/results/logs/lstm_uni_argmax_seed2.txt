@@ -1,0 +1,16 @@
+[INFO] ckpt=sample_lstm_uniform_seed2.pt device=cpu model_type=lstm
+[INFO] split=val align=uniform decision=argmax
+[INFO] evaluated samples=104 acc=0.740 (skipped_invalid=0, skipped_no_label=0)
+
+Per-class metrics:
+  front      precision=0.727  recall=0.632  f1=0.676  support=38
+  roundhouse precision=0.692  recall=0.720  f1=0.706  support=25
+  axe        precision=0.778  recall=0.854  f1=0.814  support=41
+
+Macro-F1=0.732  Weighted-F1=0.738  BalancedAcc=0.735
+
+Confusion Matrix (rows=true, cols=pred):
+                   front  roundhouse         axe
+front                 24           4          10
+roundhouse             7          18           0
+axe                    2           4          35

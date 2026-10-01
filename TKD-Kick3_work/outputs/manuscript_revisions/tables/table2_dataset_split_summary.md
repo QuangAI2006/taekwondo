@@ -1,0 +1,10 @@
+Table 2. Dataset inclusion, exclusion, and current split summary
+
+| Stage/Split | Participants | Front | Roundhouse | Axe | Total | Note |
+| --- | --- | --- | --- | --- | --- | --- |
+| Protocol expected | 140 | 280 | 280 | 280 | 840 | Protocol design |
+| Retained active sequences | not encoded | 288 | 190 | 287 | 765 | Cleaned pose sequences |
+| Current train split | unavailable | 245 | 159 | 244 | 648 | File-level train |
+| Current validation split | unavailable | 38 | 25 | 41 | 104 | File-level validation |
+| Release/example set | unavailable | 5 | 6 | 2 | 13 | Examples only |
+| Protocol minus retained |  |  |  |  | 75 | No per-reason log |

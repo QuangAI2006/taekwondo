@@ -1,0 +1,17 @@
+# Keypoint Mapping
+
+| Index | Keypoint | Source landmark |
+| --- | --- | --- |
+| 0 | nose | MediaPipe 33 landmark 0 |
+| 1 | left shoulder | MediaPipe 33 landmark 11 |
+| 2 | right shoulder | MediaPipe 33 landmark 12 |
+| 3 | left elbow | MediaPipe 33 landmark 13 |
+| 4 | right elbow | MediaPipe 33 landmark 14 |
+| 5 | left wrist | MediaPipe 33 landmark 15 |
+| 6 | right wrist | MediaPipe 33 landmark 16 |
+| 7 | left hip | MediaPipe 33 landmark 23 |
+| 8 | right hip | MediaPipe 33 landmark 24 |
+| 9 | left knee | MediaPipe 33 landmark 25 |
+| 10 | right knee | MediaPipe 33 landmark 26 |
+| 11 | left ankle | MediaPipe 33 landmark 27 |
+| 12 | right ankle | MediaPipe 33 landmark 28 |

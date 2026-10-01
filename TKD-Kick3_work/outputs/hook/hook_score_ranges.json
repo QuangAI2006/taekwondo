@@ -1,0 +1,63 @@
+{
+  "fixed": {
+    "elbow_ideal": [
+      75.0,
+      115.0
+    ],
+    "elbow_margin": 45.0,
+    "elbow_level": [
+      -0.45,
+      -0.1
+    ],
+    "forearm_tilt": [
+      0.6,
+      0.2
+    ],
+    "guard_dist": [
+      0.8,
+      0.4
+    ],
+    "valid_ratio_min": 0.6
+  },
+  "calibrated": {
+    "speed": [
+      3.589083611220121,
+      7.178167222440242
+    ],
+    "power": [
+      3.4174232273890324,
+      6.834846454778065
+    ],
+    "smoothness": [
+      0.2793725576917492,
+      0.5587451153834984
+    ],
+    "shoulder_turn": [
+      0.0,
+      0.20538926124572754
+    ],
+    "hip_turn": [
+      0.0,
+      0.2712974548339844
+    ],
+    "recovery": [
+      0.0,
+      0.21734559535980225
+    ],
+    "base_sway": [
+      0.4026094526052475,
+      0.20130472630262375
+    ]
+  },
+  "calibration_rule": {
+    "speed": 0.5,
+    "power": 0.5,
+    "smoothness": 0.5,
+    "shoulder_turn": 0.0,
+    "hip_turn": 0.0,
+    "recovery": 0.0,
+    "base_sway": 2.0
+  },
+  "n_reference": 24,
+  "note": "provisional thresholds; full credit = median of reference clips; needs expert confirmation"
+}

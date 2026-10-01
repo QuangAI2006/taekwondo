@@ -1,0 +1,10 @@
+Table 8. Human-AI agreement on the expert-annotated subset
+
+| Metric | Result |
+| --- | --- |
+| Expert score reliability | ICC(A,3) = 0.915, 95% bootstrap CI [0.850, 0.949] |
+| Class agreement vs expert majority | 83.3% (25/30), kappa = 0.750 |
+| Score rank correlation | Spearman rho = 0.627 |
+| Score linear correlation | Pearson r = 0.606 |
+| Score error | MAE = 0.601; MSE = 0.514 |
+| Bland-Altman | bias = +0.341; 95% LOA [-0.915, 1.598] |

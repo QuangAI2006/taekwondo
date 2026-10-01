@@ -1,0 +1,4 @@
+﻿model,input_dim,sequence_length,hidden_or_model_dim,layers,dropout,notes
+LSTM,52,96,128,2,0.2,"Bidirectional LSTM, mean pooling over time"
+GCN,52,96,64,2,0.2,Spatial skeleton GCN with temporal convolution
+Transformer,52,96,128,2,0.2,"4 heads, FFN dimension 256, sinusoidal positional encoding"

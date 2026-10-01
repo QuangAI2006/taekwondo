@@ -1,0 +1,15 @@
+protocol: current_cleaned_sample_level_validation
+participant_independent: false
+participant_independence_note: participant identifiers unavailable
+split: train=648, val=104, test_examples=13
+seeds: [0, 1, 2]
+optimizer: Adam
+learning_rate: 0.001
+epochs: 40
+batch_size: 8
+transformer_label_smoothing: 0.05
+baseline_label_smoothing: 0.0
+weight_decay: 0.0
+scheduler: none
+sampler: class-balanced WeightedRandomSampler
+checkpoint_selection: best validation accuracy
