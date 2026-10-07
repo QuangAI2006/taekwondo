@@ -1,0 +1,1438 @@
+{
+  "source_filename": "Bo_ho_so_scoring_va_quay_dataset_HLV_v0.2.xlsx",
+  "source_sha256": "59880f561e0a0d3e4cfc42af51b99d60749f237aa1cc5c8c12ae87c5be4265df",
+  "purpose": "Nguồn tham chiếu dữ liệu v0.2; không phải chỉ thị thực thi.",
+  "sheets": {
+    "Huong_dan": [
+      {
+        "A1": "HỒ SƠ SCORING VÀ QUAY DATASET — DÀNH CHO HLV"
+      },
+      {
+        "A2": "Bản tổng hợp từ tài liệu project; v0.2 ngày 07/10/2026 — cập nhật cho khớp code đã commit (TKD-Kick3_Zenodo_Materials_20260526_153619/code, commit a87bbb5). Các quy ước đề xuất cần HLV xác nhận. Danh sách thay đổi: Thay_doi_v0_2."
+      },
+      {
+        "A3": "Cách dùng: đọc Huong_dan → kiểm tra Checklist → xem scoring/rubric động tác → điền các sheet mẫu."
+      },
+      {
+        "A4": "Scoring: kỹ thuật 4 + biểu hiện 6 = 10 cho mọi luật trong code. Rubric chuyên gia 0/1/2/NA là quy ước đề xuất riêng (hiện có cho 5 động tác cốt lõi)."
+      },
+      {
+        "A5": "Pipeline: infer_action.py (1 video) và score_segments.py (video dài). Model nhận dạng mặc định: LSTM 3 lớp của tác giả (front/roundhouse/axe); động tác khác chấm bằng --action. Đá dùng pose 2D; đấm, kỹ thuật tay, tấn, bộ pháp dùng thêm 3D world của MediaPipe từ 1 camera. Chưa hợp nhất multi-camera hoặc dựng 3D."
+      },
+      {
+        "A6": "Các sheet Mau_* để trống dữ liệu thực; header có thể giữ nguyên để xuất lại CSV."
+      },
+      {
+        "A7": "Sheet",
+        "B7": "Nội dung",
+        "C7": "Nguồn / phạm vi"
+      },
+      {
+        "A8": "Thay_doi_v0_2",
+        "B8": "Danh sách thay đổi so với v0.1",
+        "C8": "Nhấn tên sheet để mở"
+      },
+      {
+        "A9": "Luat_cham_trong_code",
+        "B9": "Bảng tra 24 luật chấm trong code",
+        "C9": "Nhấn tên sheet để mở"
+      },
+      {
+        "A10": "Score_Da_truoc",
+        "B10": "Bảng tra cứu / hướng dẫn",
+        "C10": "Nhấn tên sheet để mở"
+      },
+      {
+        "A11": "Score_Da_vong_cau",
+        "B11": "Bảng tra cứu / hướng dẫn",
+        "C11": "Nhấn tên sheet để mở"
+      },
+      {
+        "A12": "Score_Da_che",
+        "B12": "Bảng tra cứu / hướng dẫn",
+        "C12": "Nhấn tên sheet để mở"
+      },
+      {
+        "A13": "Score_Da_ngang",
+        "B13": "Bảng tra cứu / hướng dẫn",
+        "C13": "Nhấn tên sheet để mở"
+      },
+      {
+        "A14": "Score_Dam_moc",
+        "B14": "Bảng tra công thức (punch_scoring.py)",
+        "C14": "Nhấn tên sheet để mở"
+      },
+      {
+        "A15": "Score_Dam_thang",
+        "B15": "Bảng tra công thức (punch_scoring.py)",
+        "C15": "Nhấn tên sheet để mở"
+      },
+      {
+        "A16": "Score_Mo_rong",
+        "B16": "Bảng tra công thức 18 luật mở rộng",
+        "C16": "Nhấn tên sheet để mở"
+      },
+      {
+        "A17": "Rubric_40_tieu_chi",
+        "B17": "Bảng tra cứu / hướng dẫn",
+        "C17": "Nhấn tên sheet để mở"
+      },
+      {
+        "A18": "Quy_chuan_dataset",
+        "B18": "Bảng tra cứu / hướng dẫn",
+        "C18": "Nhấn tên sheet để mở"
+      },
+      {
+        "A19": "Requirement_HLV_Multicam",
+        "B19": "Bảng tra cứu / hướng dẫn",
+        "C19": "Nhấn tên sheet để mở"
+      },
+      {
+        "A20": "Checklist",
+        "B20": "Bảng tra cứu / hướng dẫn",
+        "C20": "Nhấn tên sheet để mở"
+      },
+      {
+        "A21": "Policy",
+        "B21": "Bảng tra cứu / hướng dẫn",
+        "C21": "Nhấn tên sheet để mở"
+      },
+      {
+        "A22": "Mau_clip_co_ban",
+        "B22": "Mẫu điền dữ liệu",
+        "C22": "Nhấn tên sheet để mở"
+      },
+      {
+        "A23": "Mau_clip_HLV",
+        "B23": "Mẫu điền dữ liệu",
+        "C23": "Nhấn tên sheet để mở"
+      },
+      {
+        "A24": "Mau_clip_multicam",
+        "B24": "Mẫu điền dữ liệu",
+        "C24": "Nhấn tên sheet để mở"
+      },
+      {
+        "A25": "Mau_camera_setup",
+        "B25": "Mẫu điền dữ liệu",
+        "C25": "Nhấn tên sheet để mở"
+      },
+      {
+        "A26": "Mau_dong_bo",
+        "B26": "Mẫu điền dữ liệu",
+        "C26": "Nhấn tên sheet để mở"
+      },
+      {
+        "A27": "Mau_nhan_chuyen_gia",
+        "B27": "Mẫu điền dữ liệu",
+        "C27": "Nhấn tên sheet để mở"
+      },
+      {
+        "A28": "Mau_nhan_chot",
+        "B28": "Mẫu điền dữ liệu",
+        "C28": "Nhấn tên sheet để mở"
+      },
+      {
+        "A29": "Mau_diem_tu_dong",
+        "B29": "Mẫu điền dữ liệu",
+        "C29": "Nhấn tên sheet để mở"
+      },
+      {
+        "A30": "Tu_dien_truong",
+        "B30": "Bảng tra cứu / hướng dẫn",
+        "C30": "Nhấn tên sheet để mở"
+      }
+    ],
+    "Luat_cham_trong_code": [
+      {
+        "A1": "action (--action)",
+        "B1": "Tên trong code",
+        "C1": "Bài trong video VinKungfu (ví dụ)",
+        "D1": "File luật",
+        "E1": "Tọa độ cần",
+        "F1": "Model nhận dạng mặc định",
+        "G1": "Tách lần (score_segments.py)",
+        "H1": "Rubric chuyên gia",
+        "I1": "Phạm vi dataset v0.2",
+        "J1": "Alias tên thư mục (ALIASES)",
+        "K1": "Sheet công thức"
+      },
+      {
+        "A2": "front",
+        "B2": "Ap chagi (đá tống trước)",
+        "C2": "Đá trước cao; Nhảy lùi – đá trước; Nhảy (đá) hất chân; Co đá song phi",
+        "D2": "action_scorers.py → scoring_api.py",
+        "E2": "kpts 2D",
+        "F2": "Có — LSTM 3 lớp của tác giả",
+        "G2": "Đỉnh chênh độ cao 2 cổ chân",
+        "H2": "Có (Rubric_40_tieu_chi)",
+        "I2": "Cốt lõi",
+        "J2": "ap_chagi, da_truoc",
+        "K2": "Score_Da_truoc"
+      },
+      {
+        "A3": "roundhouse",
+        "B3": "Dollyo chagi (đá vòng cầu)",
+        "C3": "Đá vòng cầu; Xoay cổ (chân) đá vòng cầu",
+        "D3": "action_scorers.py → scoring_api.py",
+        "E3": "kpts 2D",
+        "F3": "Có — LSTM 3 lớp của tác giả",
+        "G3": "Đỉnh chênh độ cao 2 cổ chân",
+        "H3": "Có (Rubric_40_tieu_chi)",
+        "I3": "Cốt lõi",
+        "J3": "da_vong_cau, dollyo_chagi",
+        "K3": "Score_Da_vong_cau"
+      },
+      {
+        "A4": "axe",
+        "B4": "Naeryo chagi (đá bổ)",
+        "C4": "(không có trong 11 video)",
+        "D4": "action_scorers.py → scoring_api.py",
+        "E4": "kpts 2D",
+        "F4": "Có — LSTM 3 lớp của tác giả",
+        "G4": "Đỉnh chênh độ cao 2 cổ chân",
+        "H4": "Có (Rubric_40_tieu_chi)",
+        "I4": "Cốt lõi",
+        "J4": "da_bo, naeryo_chagi",
+        "K4": "Score_Da_che"
+      },
+      {
+        "A5": "side",
+        "B5": "Yeop chagi (đá ngang)",
+        "C5": "Đá ngang; Đá ngang thấp – cao",
+        "D5": "action_scorers.py → scoring_api.py",
+        "E5": "kpts 2D",
+        "F5": "Không — dùng --action, hoặc train model mới (train_actions.py)",
+        "G5": "Đỉnh chênh độ cao 2 cổ chân",
+        "H5": "Có (Rubric_40_tieu_chi)",
+        "I5": "Cốt lõi",
+        "J5": "da_ngang, yeop_chagi",
+        "K5": "Score_Da_ngang"
+      },
+      {
+        "A6": "hook",
+        "B6": "Đấm móc",
+        "C6": "Đấm móc (trái/phải); Đấm vòng",
+        "D6": "action_scorers.py → punch_scoring.py",
+        "E6": "kpts 2D + world 3D",
+        "F6": "Không — dùng --action, hoặc train model mới (train_actions.py)",
+        "G6": "Đỉnh tốc độ cổ tay",
+        "H6": "Có (Rubric_40_tieu_chi)",
+        "I6": "Cốt lõi",
+        "J6": "dam_moc, dam_vong",
+        "K6": "Score_Dam_moc"
+      },
+      {
+        "A7": "straight",
+        "B7": "Đấm thẳng",
+        "C7": "Đấm trái – phải (thẳng)",
+        "D7": "action_scorers.py → punch_scoring.py",
+        "E7": "kpts 2D + world 3D",
+        "F7": "Không — dùng --action, hoặc train model mới (train_actions.py)",
+        "G7": "Đỉnh |độ vươn tay trái − phải|; tay ra đòn = tay vươn xa hơn",
+        "H7": "Chưa có — HLV cần viết trước khi gán nhãn",
+        "I7": "Mở rộng (chỉ điểm tự động)",
+        "J7": "dam_thang, jireugi",
+        "K7": "Score_Dam_thang"
+      },
+      {
+        "A8": "back",
+        "B8": "Dwit chagi (đá sau)",
+        "C8": "Đá sau",
+        "D8": "scorers_kicks_extra.py",
+        "E8": "kpts 2D",
+        "F8": "Không — dùng --action, hoặc train model mới (train_actions.py)",
+        "G8": "Đỉnh chênh độ cao 2 cổ chân",
+        "H8": "Chưa có — HLV cần viết trước khi gán nhãn",
+        "I8": "Mở rộng (chỉ điểm tự động)",
+        "J8": "da_sau, dwit_chagi",
+        "K8": "Score_Mo_rong"
+      },
+      {
+        "A9": "hook_kick",
+        "B9": "Huryeo chagi (đá móc gập)",
+        "C9": "Đá gập vòng",
+        "D9": "scorers_kicks_extra.py",
+        "E9": "kpts 2D",
+        "F9": "Không — dùng --action, hoặc train model mới (train_actions.py)",
+        "G9": "Đỉnh chênh độ cao 2 cổ chân",
+        "H9": "Chưa có — HLV cần viết trước khi gán nhãn",
+        "I9": "Mở rộng (chỉ điểm tự động)",
+        "J9": "da_gap_vong, huryeo_chagi",
+        "K9": "Score_Mo_rong"
+      },
+      {
+        "A10": "push",
+        "B10": "Mireo chagi (đá đẩy / đá ức)",
+        "C10": "Đá ức ngang; Đá ức chân; Ngả người – đá ức chân",
+        "D10": "scorers_kicks_extra.py",
+        "E10": "kpts 2D",
+        "F10": "Không — dùng --action, hoặc train model mới (train_actions.py)",
+        "G10": "Đỉnh chênh độ cao 2 cổ chân",
+        "H10": "Chưa có — HLV cần viết trước khi gán nhãn",
+        "I10": "Mở rộng (chỉ điểm tự động)",
+        "J10": "da_day, da_uc, da_uc_chan, mireo_chagi",
+        "K10": "Score_Mo_rong"
+      },
+      {
+        "A11": "side_low",
+        "B11": "Yeop chagi thấp (đá cạnh thấp)",
+        "C11": "Đá cạnh thấp",
+        "D11": "scorers_kicks_extra.py",
+        "E11": "kpts 2D",
+        "F11": "Không — dùng --action, hoặc train model mới (train_actions.py)",
+        "G11": "Đỉnh chênh độ cao 2 cổ chân",
+        "H11": "Chưa có — HLV cần viết trước khi gán nhãn",
+        "I11": "Mở rộng (chỉ điểm tự động)",
+        "J11": "da_canh_thap",
+        "K11": "Score_Mo_rong"
+      },
+      {
+        "A12": "roundhouse_low",
+        "B12": "Dollyo chagi thấp (đá vòng cầu thấp)",
+        "C12": "Đá vòng cầu thấp",
+        "D12": "scorers_kicks_extra.py",
+        "E12": "kpts 2D",
+        "F12": "Không — dùng --action, hoặc train model mới (train_actions.py)",
+        "G12": "Đỉnh chênh độ cao 2 cổ chân",
+        "H12": "Chưa có — HLV cần viết trước khi gán nhãn",
+        "I12": "Mở rộng (chỉ điểm tự động)",
+        "J12": "da_vong_cau_thap",
+        "K12": "Score_Mo_rong"
+      },
+      {
+        "A13": "high_block",
+        "B13": "Olgul makki (đỡ cao)",
+        "C13": "Đỡ cao",
+        "D13": "scorers_hands.py + hand_scoring.py",
+        "E13": "kpts 2D + world 3D",
+        "F13": "Không — dùng --action, hoặc train model mới (train_actions.py)",
+        "G13": "Đỉnh cổ tay cao hơn mũi",
+        "H13": "Chưa có — HLV cần viết trước khi gán nhãn",
+        "I13": "Mở rộng (chỉ điểm tự động)",
+        "J13": "do_cao, olgul_makki",
+        "K13": "Score_Mo_rong"
+      },
+      {
+        "A14": "low_block",
+        "B14": "Arae makki (gạt thấp)",
+        "C14": "Bước gạt thấp",
+        "D14": "scorers_hands.py + hand_scoring.py",
+        "E14": "kpts 2D + world 3D",
+        "F14": "Không — dùng --action, hoặc train model mới (train_actions.py)",
+        "G14": "Đỉnh cổ tay thấp hơn vai",
+        "H14": "Chưa có — HLV cần viết trước khi gán nhãn",
+        "I14": "Mở rộng (chỉ điểm tự động)",
+        "J14": "arae_makki, gat_thap",
+        "K14": "Score_Mo_rong"
+      },
+      {
+        "A15": "knife_block",
+        "B15": "Sonnal makki (chém cạnh 2 tay)",
+        "C15": "Bước mở chân – chém cạnh 2 tay",
+        "D15": "scorers_hands.py + hand_scoring.py",
+        "E15": "kpts 2D + world 3D",
+        "F15": "Không — dùng --action, hoặc train model mới (train_actions.py)",
+        "G15": "Đỉnh cổ tay vươn ngang",
+        "H15": "Chưa có — HLV cần viết trước khi gán nhãn",
+        "I15": "Mở rộng (chỉ điểm tự động)",
+        "J15": "chem_canh, sonnal_makki",
+        "K15": "Score_Mo_rong"
+      },
+      {
+        "A16": "knife_strike",
+        "B16": "Sonnal chigi (chém đao 1 tay)",
+        "C16": "Bước mở chân – chém đao 1 tay",
+        "D16": "scorers_hands.py + hand_scoring.py",
+        "E16": "kpts 2D + world 3D",
+        "F16": "Không — dùng --action, hoặc train model mới (train_actions.py)",
+        "G16": "Đỉnh cổ tay vươn ngang",
+        "H16": "Chưa có — HLV cần viết trước khi gán nhãn",
+        "I16": "Mở rộng (chỉ điểm tự động)",
+        "J16": "chem_dao, sonnal_chigi",
+        "K16": "Score_Mo_rong"
+      },
+      {
+        "A17": "spear_hand",
+        "B17": "Pyeonsonkkeut tulki (chọc mũi tay)",
+        "C17": "Bước chọc mũi tay",
+        "D17": "scorers_hands.py + hand_scoring.py",
+        "E17": "kpts 2D + world 3D",
+        "F17": "Không — dùng --action, hoặc train model mới (train_actions.py)",
+        "G17": "Đỉnh độ vươn tay",
+        "H17": "Chưa có — HLV cần viết trước khi gán nhãn",
+        "I17": "Mở rộng (chỉ điểm tự động)",
+        "J17": "choc_mui_tay, pyeonsonkkeut_tulki",
+        "K17": "Score_Mo_rong"
+      },
+      {
+        "A18": "block_punch",
+        "B18": "Gạt thấp – đấm thẳng",
+        "C18": "Gạt thấp – đấm thẳng",
+        "D18": "scorers_combos.py",
+        "E18": "kpts 2D + world 3D",
+        "F18": "Không — dùng --action, hoặc train model mới (train_actions.py)",
+        "G18": "Mỗi lần tay gạt hạ xuống",
+        "H18": "Chưa có — HLV cần viết trước khi gán nhãn",
+        "I18": "Mở rộng (chỉ điểm tự động)",
+        "J18": "gat_thap_dam_thang",
+        "K18": "Score_Mo_rong"
+      },
+      {
+        "A19": "block_kick",
+        "B19": "Gạt thấp – đá trước",
+        "C19": "Gạt thấp – đá trước",
+        "D19": "scorers_combos.py",
+        "E19": "kpts 2D + world 3D (phần gạt)",
+        "F19": "Không — dùng --action, hoặc train model mới (train_actions.py)",
+        "G19": "Mỗi lần tay gạt hạ xuống",
+        "H19": "Chưa có — HLV cần viết trước khi gán nhãn",
+        "I19": "Mở rộng (chỉ điểm tự động)",
+        "J19": "gat_thap_da_truoc",
+        "K19": "Score_Mo_rong"
+      },
+      {
+        "A20": "horse_punch",
+        "B20": "Rộng chân – đấm thẳng (đấm thẳng trong tấn rộng)",
+        "C20": "Rộng chân – đấm thẳng",
+        "D20": "scorers_combos.py",
+        "E20": "kpts 2D + world 3D",
+        "F20": "Không — dùng --action, hoặc train model mới (train_actions.py)",
+        "G20": "Đỉnh |độ vươn tay trái − phải|; tay ra đòn = tay vươn xa hơn",
+        "H20": "Chưa có — HLV cần viết trước khi gán nhãn",
+        "I20": "Mở rộng (chỉ điểm tự động)",
+        "J20": "juchum_seogi_jireugi, rong_chan_dam_thang",
+        "K20": "Score_Mo_rong"
+      },
+      {
+        "A21": "horse_stance",
+        "B21": "Juchum seogi (đứng trung bình tấn)",
+        "C21": "Đứng trung bình tấn",
+        "D21": "scorers_stances.py",
+        "E21": "kpts 2D + world 3D",
+        "F21": "Không — dùng --action, hoặc train model mới (train_actions.py)",
+        "G21": "Cửa sổ 3 s",
+        "H21": "Chưa có — HLV cần viết trước khi gán nhãn",
+        "I21": "Mở rộng (chỉ điểm tự động)",
+        "J21": "juchum_seogi, trung_binh_tan",
+        "K21": "Score_Mo_rong"
+      },
+      {
+        "A22": "front_stance",
+        "B22": "Ap kubi (tấn trước dài)",
+        "C22": "Tấn trước dài",
+        "D22": "scorers_stances.py",
+        "E22": "kpts 2D + world 3D",
+        "F22": "Không — dùng --action, hoặc train model mới (train_actions.py)",
+        "G22": "Cửa sổ 3 s",
+        "H22": "Chưa có — HLV cần viết trước khi gán nhãn",
+        "I22": "Mở rộng (chỉ điểm tự động)",
+        "J22": "ap_kubi, tan_truoc_dai",
+        "K22": "Score_Mo_rong"
+      },
+      {
+        "A23": "footwork",
+        "B23": "Bộ pháp: nhảy tiến – lùi",
+        "C23": "Nhảy tiến – lùi",
+        "D23": "scorers_drills.py",
+        "E23": "kpts 2D + world 3D",
+        "F23": "Không — dùng --action, hoặc train model mới (train_actions.py)",
+        "G23": "Đỉnh tốc độ cổ chân",
+        "H23": "Chưa có — HLV cần viết trước khi gán nhãn",
+        "I23": "Mở rộng (chỉ điểm tự động)",
+        "J23": "nhay_tien_lui",
+        "K23": "Score_Mo_rong"
+      },
+      {
+        "A24": "duck",
+        "B24": "Thủ thế thụt người (né hạ người)",
+        "C24": "Thủ thế thụt người",
+        "D24": "scorers_drills.py",
+        "E24": "kpts 2D + world 3D",
+        "F24": "Không — dùng --action, hoặc train model mới (train_actions.py)",
+        "G24": "Đỉnh đầu hạ thấp nhất",
+        "H24": "Chưa có — HLV cần viết trước khi gán nhãn",
+        "I24": "Mở rộng (chỉ điểm tự động)",
+        "J24": "thu_the_thut_nguoi",
+        "K24": "Score_Mo_rong"
+      },
+      {
+        "A25": "knee_chamber",
+        "B25": "Thủ co gối",
+        "C25": "Thủ co gối",
+        "D25": "scorers_drills.py",
+        "E25": "kpts 2D + world 3D",
+        "F25": "Không — dùng --action, hoặc train model mới (train_actions.py)",
+        "G25": "Đỉnh gối nâng cao nhất",
+        "H25": "Chưa có — HLV cần viết trước khi gán nhãn",
+        "I25": "Mở rộng (chỉ điểm tự động)",
+        "J25": "thu_co_goi",
+        "K25": "Score_Mo_rong"
+      },
+      {
+        "A27": "Liệt kê từ code: python code/scripts/score_segments.py --list (đăng ký qua @register_scorer; infer_action.py tự nạp mọi scripts/scorers_*.py)."
+      },
+      {
+        "A28": "Chấm 1 clip: python code/scripts/infer_action.py clip.mp4 --action <action> [--no_model] --kick_window none --fix_leg --out ket_qua.json --save_pose pose.npz (--save_pose chỉ khi chấm 1 video)."
+      },
+      {
+        "A29": "Chấm nhiều lần thực hiện trong video dài: python code/scripts/score_segments.py --segments doan.csv --root <thư mục video> --out <thư mục kết quả> --pose_cache <thư mục pose> [--transcode cho video AV1] → reps.csv, summary.csv, results.json."
+      }
+    ],
+    "Rubric_40_tieu_chi": [
+      {
+        "A1": "technique",
+        "B1": "criterion_code",
+        "C1": "criterion",
+        "D1": "group",
+        "E1": "max_points",
+        "F1": "rating_2",
+        "G1": "rating_1",
+        "H1": "rating_0",
+        "I1": "rating_NA",
+        "J1": "code_formula_reference",
+        "K1": "status"
+      },
+      {
+        "A2": "front",
+        "B2": "FR_A1",
+        "C2": "Nâng gối và đường đá thẳng",
+        "D2": "Kỹ thuật",
+        "E2": "1.6",
+        "F2": "Có nâng gối trước khi duỗi, đường đưa chân nhất quán về mục tiêu",
+        "G2": "Nâng gối ít hoặc đường đưa chân lệch nhẹ",
+        "H2": "Không thấy pha nâng gối hoặc đường chân lệch rõ",
+        "I2": "Không quan sát đủ: không quy đổi thành 0",
+        "J2": "1.6 * (0.60 * map(knee_lift_vertical, 0.04, 0.12) + 0.40 * map(straightness, 0.72, 0.96))",
+        "K2": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A3": "front",
+        "B3": "FR_A2",
+        "C3": "Độ cao và duỗi gối",
+        "D3": "Kỹ thuật",
+        "E3": "1.2",
+        "F3": "Đạt vùng mục tiêu đã khai báo, duỗi gối rõ và kiểm soát",
+        "G3": "Thiếu độ cao hoặc duỗi gối chưa rõ",
+        "H3": "Không đạt vùng mục tiêu và thiếu duỗi gối rõ",
+        "I3": "Không quan sát đủ: không quy đổi thành 0",
+        "J3": "1.2 * (0.55 * map(height_raw, 0.15, 0.65) + 0.45 * map(kick_knee_angle_peak, 135 deg, 175 deg))",
+        "K3": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A4": "front",
+        "B4": "FR_A3",
+        "C4": "Thu chân về vị trí ban đầu",
+        "D4": "Kỹ thuật",
+        "E4": "0.8",
+        "F4": "Thu chân chủ động rồi về tư thế chuẩn bị đã khai báo",
+        "G4": "Thu chân chậm hoặc về tư thế chưa ổn định",
+        "H4": "Thả chân xuống, không thấy pha thu chủ động",
+        "I4": "Không quan sát đủ: không quy đổi thành 0",
+        "J4": "0.8 * map(recovery_ratio, 0.25, 0.75)",
+        "K4": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A5": "front",
+        "B5": "FR_A4",
+        "C5": "Ổn định thân và tay thủ",
+        "D5": "Kỹ thuật",
+        "E5": "0.4",
+        "F5": "Thân ổn định, tay duy trì thế thủ trong pha đá",
+        "G5": "Có dao động thân hoặc hạ tay ngắn",
+        "H5": "Dao động rõ hoặc tay mất thế thủ kéo dài",
+        "I5": "Không quan sát đủ: không quy đổi thành 0",
+        "J5": "0.4 * (0.65 * map(stability, 0.35, 0.80) + 0.35 * (1 - hand_guard_drop / 0.25))",
+        "K5": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A6": "front",
+        "B6": "EX_E1",
+        "C6": "Tốc độ",
+        "D6": "Biểu hiện",
+        "E6": "2.0",
+        "F6": "Nhanh, dứt khoát so với bộ clip neo cùng điều kiện",
+        "G6": "Tốc độ trung gian so với clip neo",
+        "H6": "Chậm rõ so với clip neo",
+        "I6": "Không quan sát đủ: không quy đổi thành 0",
+        "J6": "2.0 * map(speed_raw, 0.20, 0.75)",
+        "K6": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A7": "front",
+        "B7": "EX_E2",
+        "C7": "Độ bộc phát (chỉ số động học)",
+        "D7": "Biểu hiện",
+        "E7": "1.6",
+        "F7": "Tăng tốc rõ ở pha thực hiện, kiểm soát được kết thúc",
+        "G7": "Có tăng tốc nhưng chưa dứt khoát",
+        "H7": "Thiếu pha tăng tốc rõ",
+        "I7": "Không quan sát đủ: không quy đổi thành 0",
+        "J7": "1.6 * map(power_raw, 0.18, 0.70)",
+        "K7": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A8": "front",
+        "B8": "EX_E3",
+        "C8": "Độ cao",
+        "D8": "Biểu hiện",
+        "E8": "1.4",
+        "F8": "Đạt vùng độ cao mục tiêu đã khai báo",
+        "G8": "Gần vùng mục tiêu nhưng còn thiếu",
+        "H8": "Thấp rõ so với vùng mục tiêu",
+        "I8": "Không quan sát đủ: không quy đổi thành 0",
+        "J8": "1.4 * map(height_raw, 0.15, 0.65)",
+        "K8": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A9": "front",
+        "B9": "EX_E4",
+        "C9": "Độ mượt",
+        "D9": "Biểu hiện",
+        "E9": "1.0",
+        "F9": "Các pha nối liên tục, không khựng hoặc đổi hướng thừa",
+        "G9": "Có một đoạn khựng hoặc chỉnh nhỏ",
+        "H9": "Khựng hoặc chỉnh hướng nhiều lần",
+        "I9": "Không quan sát đủ: không quy đổi thành 0",
+        "J9": "1.0 * map(smoothness, 0.45, 0.85)",
+        "K9": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A10": "roundhouse",
+        "B10": "RH_A1",
+        "C10": "Hướng vung chân và đường đá",
+        "D10": "Kỹ thuật",
+        "E10": "1.6",
+        "F10": "Đường vung và hướng kết thúc nhất quán với mục tiêu của đòn vòng cầu",
+        "G10": "Hướng vung hoặc điểm kết thúc lệch nhẹ",
+        "H10": "Đường vung sai rõ hoặc nhầm loại động tác",
+        "I10": "Không quan sát đủ: không quy đổi thành 0",
+        "J10": "1.6 * (0.70 * map(30 - roundhouse_align_dev_deg, 5, 25) + 0.30 * map(straightness, 0.70, 0.95))",
+        "K10": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A11": "roundhouse",
+        "B11": "RH_A2",
+        "C11": "Độ cao và duỗi gối",
+        "D11": "Kỹ thuật",
+        "E11": "1.2",
+        "F11": "Đạt vùng mục tiêu, duỗi gối rõ và kiểm soát",
+        "G11": "Thiếu độ cao hoặc duỗi gối chưa rõ",
+        "H11": "Không đạt mục tiêu và thiếu duỗi gối rõ",
+        "I11": "Không quan sát đủ: không quy đổi thành 0",
+        "J11": "1.2 * (0.55 * map(height_raw, 0.15, 0.65) + 0.45 * map(kick_knee_angle_peak, 135 deg, 175 deg))",
+        "K11": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A12": "roundhouse",
+        "B12": "RH_A3",
+        "C12": "Thu chân về vị trí ban đầu",
+        "D12": "Kỹ thuật",
+        "E12": "0.8",
+        "F12": "Thu chân chủ động, kết thúc trong tư thế đã khai báo",
+        "G12": "Thu chậm hoặc kết thúc chưa ổn định",
+        "H12": "Không thấy thu chủ động hoặc mất kiểm soát kết thúc",
+        "I12": "Không quan sát đủ: không quy đổi thành 0",
+        "J12": "0.8 * map(recovery_ratio, 0.25, 0.75)",
+        "K12": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A13": "roundhouse",
+        "B13": "RH_A4",
+        "C13": "Ổn định thân và kiểm soát đặt chân",
+        "D13": "Kỹ thuật",
+        "E13": "0.4",
+        "F13": "Giữ thăng bằng, đặt chân có kiểm soát trong vùng kết thúc đã khai báo",
+        "G13": "Dao động hoặc bước sửa nhỏ",
+        "H13": "Mất thăng bằng rõ hoặc cần bước sửa lớn",
+        "I13": "Không quan sát đủ: không quy đổi thành 0",
+        "J13": "0.4 * (0.60 * map(stability, 0.35, 0.80) + 0.40 * map(landing_forward, -0.08, 0.08))",
+        "K13": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A14": "roundhouse",
+        "B14": "EX_E1",
+        "C14": "Tốc độ",
+        "D14": "Biểu hiện",
+        "E14": "2.0",
+        "F14": "Nhanh, dứt khoát so với bộ clip neo cùng điều kiện",
+        "G14": "Tốc độ trung gian so với clip neo",
+        "H14": "Chậm rõ so với clip neo",
+        "I14": "Không quan sát đủ: không quy đổi thành 0",
+        "J14": "2.0 * map(speed_raw, 0.20, 0.75)",
+        "K14": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A15": "roundhouse",
+        "B15": "EX_E2",
+        "C15": "Độ bộc phát (chỉ số động học)",
+        "D15": "Biểu hiện",
+        "E15": "1.6",
+        "F15": "Tăng tốc rõ ở pha thực hiện, kiểm soát được kết thúc",
+        "G15": "Có tăng tốc nhưng chưa dứt khoát",
+        "H15": "Thiếu pha tăng tốc rõ",
+        "I15": "Không quan sát đủ: không quy đổi thành 0",
+        "J15": "1.6 * map(power_raw, 0.18, 0.70)",
+        "K15": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A16": "roundhouse",
+        "B16": "EX_E3",
+        "C16": "Độ cao",
+        "D16": "Biểu hiện",
+        "E16": "1.4",
+        "F16": "Đạt vùng độ cao mục tiêu đã khai báo",
+        "G16": "Gần vùng mục tiêu nhưng còn thiếu",
+        "H16": "Thấp rõ so với vùng mục tiêu",
+        "I16": "Không quan sát đủ: không quy đổi thành 0",
+        "J16": "1.4 * map(height_raw, 0.15, 0.65)",
+        "K16": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A17": "roundhouse",
+        "B17": "EX_E4",
+        "C17": "Độ mượt",
+        "D17": "Biểu hiện",
+        "E17": "1.0",
+        "F17": "Các pha nối liên tục, không khựng hoặc đổi hướng thừa",
+        "G17": "Có một đoạn khựng hoặc chỉnh nhỏ",
+        "H17": "Khựng hoặc chỉnh hướng nhiều lần",
+        "I17": "Không quan sát đủ: không quy đổi thành 0",
+        "J17": "1.0 * map(smoothness, 0.45, 0.85)",
+        "K17": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A18": "axe",
+        "B18": "AX_A1",
+        "C18": "Độ cao và đường nâng chân",
+        "D18": "Kỹ thuật",
+        "E18": "1.6",
+        "F18": "Nâng chân đạt vùng mục tiêu, đường nâng liên tục và kiểm soát",
+        "G18": "Độ cao thiếu hoặc đường nâng dao động nhẹ",
+        "H18": "Không thấy pha nâng rõ hoặc đường nâng mất kiểm soát",
+        "I18": "Không quan sát đủ: không quy đổi thành 0",
+        "J18": "1.6 * (0.55 * map(height_raw, 0.15, 0.65) + 0.45 * map(straightness, 0.70, 0.95))",
+        "K18": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A19": "axe",
+        "B19": "AX_A2",
+        "C19": "Tốc độ chân đi xuống",
+        "D19": "Kỹ thuật",
+        "E19": "1.2",
+        "F19": "Có pha đi xuống rõ, tăng tốc có kiểm soát về vùng mục tiêu",
+        "G19": "Pha xuống yếu hoặc thiếu dứt khoát",
+        "H19": "Không thấy pha chẻ xuống rõ",
+        "I19": "Không quan sát đủ: không quy đổi thành 0",
+        "J19": "1.2 * map(down_speed, 0.20, 0.90)",
+        "K19": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A20": "axe",
+        "B20": "AX_A3",
+        "C20": "Thu chân về vị trí ban đầu",
+        "D20": "Kỹ thuật",
+        "E20": "0.8",
+        "F20": "Sau pha chẻ, chủ động kiểm soát chân về tư thế kết thúc",
+        "G20": "Về tư thế chậm hoặc cần chỉnh nhỏ",
+        "H20": "Thả chân hoặc mất kiểm soát kết thúc",
+        "I20": "Không quan sát đủ: không quy đổi thành 0",
+        "J20": "0.8 * map(recovery_ratio, 0.25, 0.75)",
+        "K20": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A21": "axe",
+        "B21": "AX_A4",
+        "C21": "Ổn định thân và tay thủ",
+        "D21": "Kỹ thuật",
+        "E21": "0.4",
+        "F21": "Thân và tay thủ ổn định qua pha nâng và chẻ",
+        "G21": "Thân nghiêng hoặc hạ tay nhẹ",
+        "H21": "Thân dao động rõ hoặc mất tay thủ kéo dài",
+        "I21": "Không quan sát đủ: không quy đổi thành 0",
+        "J21": "0.4 * (0.60 * map(stability, 0.35, 0.80) + 0.40 * (1 - hand_guard_drop / 0.25))",
+        "K21": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A22": "axe",
+        "B22": "EX_E1",
+        "C22": "Tốc độ",
+        "D22": "Biểu hiện",
+        "E22": "2.0",
+        "F22": "Nhanh, dứt khoát so với bộ clip neo cùng điều kiện",
+        "G22": "Tốc độ trung gian so với clip neo",
+        "H22": "Chậm rõ so với clip neo",
+        "I22": "Không quan sát đủ: không quy đổi thành 0",
+        "J22": "2.0 * map(speed_raw, 0.20, 0.75)",
+        "K22": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A23": "axe",
+        "B23": "EX_E2",
+        "C23": "Độ bộc phát (chỉ số động học)",
+        "D23": "Biểu hiện",
+        "E23": "1.6",
+        "F23": "Tăng tốc rõ ở pha thực hiện, kiểm soát được kết thúc",
+        "G23": "Có tăng tốc nhưng chưa dứt khoát",
+        "H23": "Thiếu pha tăng tốc rõ",
+        "I23": "Không quan sát đủ: không quy đổi thành 0",
+        "J23": "1.6 * map(power_raw, 0.18, 0.70)",
+        "K23": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A24": "axe",
+        "B24": "EX_E3",
+        "C24": "Độ cao",
+        "D24": "Biểu hiện",
+        "E24": "1.4",
+        "F24": "Đạt vùng độ cao mục tiêu đã khai báo",
+        "G24": "Gần vùng mục tiêu nhưng còn thiếu",
+        "H24": "Thấp rõ so với vùng mục tiêu",
+        "I24": "Không quan sát đủ: không quy đổi thành 0",
+        "J24": "1.4 * map(height_raw, 0.15, 0.65)",
+        "K24": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A25": "axe",
+        "B25": "EX_E4",
+        "C25": "Độ mượt",
+        "D25": "Biểu hiện",
+        "E25": "1.0",
+        "F25": "Các pha nối liên tục, không khựng hoặc đổi hướng thừa",
+        "G25": "Có một đoạn khựng hoặc chỉnh nhỏ",
+        "H25": "Khựng hoặc chỉnh hướng nhiều lần",
+        "I25": "Không quan sát đủ: không quy đổi thành 0",
+        "J25": "1.0 * map(smoothness, 0.45, 0.85)",
+        "K25": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A26": "side",
+        "B26": "SD_A1",
+        "C26": "Thu gối và chuẩn bị đá ngang",
+        "D26": "Kỹ thuật",
+        "E26": "1.6",
+        "F26": "Có thu gối, chuẩn bị hướng chân rồi đẩy chân về mục tiêu",
+        "G26": "Thu gối hoặc chuyển hướng chân chưa rõ",
+        "H26": "Bỏ pha thu gối hoặc đường đẩy không phù hợp đá ngang",
+        "I26": "Không quan sát đủ: không quy đổi thành 0",
+        "J26": "1.6 * (0.55 * map(knee_lift_vertical, 0.03, 0.11) + 0.45 * map(knee_lift_lateral, 0.03, 0.10))",
+        "K26": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A27": "side",
+        "B27": "SD_A2",
+        "C27": "Độ cao và duỗi gối",
+        "D27": "Kỹ thuật",
+        "E27": "1.2",
+        "F27": "Đạt vùng mục tiêu, chân duỗi rõ và có kiểm soát",
+        "G27": "Thiếu độ cao hoặc duỗi chưa rõ",
+        "H27": "Không đạt mục tiêu và thiếu duỗi rõ",
+        "I27": "Không quan sát đủ: không quy đổi thành 0",
+        "J27": "1.2 * (0.55 * map(height_raw, 0.15, 0.65) + 0.45 * map(kick_knee_angle_peak, 135, 175))",
+        "K27": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A28": "side",
+        "B28": "SD_A3",
+        "C28": "Thu chân về vị trí ban đầu",
+        "D28": "Kỹ thuật",
+        "E28": "0.8",
+        "F28": "Thu chân chủ động trước khi đặt chân về tư thế kết thúc",
+        "G28": "Thu chậm hoặc cần chỉnh tư thế",
+        "H28": "Không có pha thu rõ hoặc mất kiểm soát",
+        "I28": "Không quan sát đủ: không quy đổi thành 0",
+        "J28": "0.8 * map(recovery_ratio, 0.25, 0.75)",
+        "K28": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A29": "side",
+        "B29": "SD_A4",
+        "C29": "Ổn định thân và tay thủ",
+        "D29": "Kỹ thuật",
+        "E29": "0.4",
+        "F29": "Giữ trụ, thân và tay thủ ổn định",
+        "G29": "Dao động thân hoặc hạ tay ngắn",
+        "H29": "Mất trụ rõ hoặc tay mất thế thủ kéo dài",
+        "I29": "Không quan sát đủ: không quy đổi thành 0",
+        "J29": "0.4 * (0.65 * map(stability, 0.35, 0.80) + 0.35 * (1 - hand_guard_drop / 0.25))",
+        "K29": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A30": "side",
+        "B30": "EX_E1",
+        "C30": "Tốc độ",
+        "D30": "Biểu hiện",
+        "E30": "2.0",
+        "F30": "Nhanh, dứt khoát so với bộ clip neo cùng điều kiện",
+        "G30": "Tốc độ trung gian so với clip neo",
+        "H30": "Chậm rõ so với clip neo",
+        "I30": "Không quan sát đủ: không quy đổi thành 0",
+        "J30": "2.0 * map(speed_raw, 0.20, 0.75)",
+        "K30": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A31": "side",
+        "B31": "EX_E2",
+        "C31": "Độ bộc phát (chỉ số động học)",
+        "D31": "Biểu hiện",
+        "E31": "1.6",
+        "F31": "Tăng tốc rõ ở pha thực hiện, kiểm soát được kết thúc",
+        "G31": "Có tăng tốc nhưng chưa dứt khoát",
+        "H31": "Thiếu pha tăng tốc rõ",
+        "I31": "Không quan sát đủ: không quy đổi thành 0",
+        "J31": "1.6 * map(power_raw, 0.18, 0.70)",
+        "K31": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A32": "side",
+        "B32": "EX_E3",
+        "C32": "Độ cao",
+        "D32": "Biểu hiện",
+        "E32": "1.4",
+        "F32": "Đạt vùng độ cao mục tiêu đã khai báo",
+        "G32": "Gần vùng mục tiêu nhưng còn thiếu",
+        "H32": "Thấp rõ so với vùng mục tiêu",
+        "I32": "Không quan sát đủ: không quy đổi thành 0",
+        "J32": "1.4 * map(height_raw, 0.15, 0.65)",
+        "K32": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A33": "side",
+        "B33": "EX_E4",
+        "C33": "Độ mượt",
+        "D33": "Biểu hiện",
+        "E33": "1.0",
+        "F33": "Các pha nối liên tục, không khựng hoặc đổi hướng thừa",
+        "G33": "Có một đoạn khựng hoặc chỉnh nhỏ",
+        "H33": "Khựng hoặc chỉnh hướng nhiều lần",
+        "I33": "Không quan sát đủ: không quy đổi thành 0",
+        "J33": "1.0 * map(smoothness, 0.45, 0.85)",
+        "K33": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A34": "hook",
+        "B34": "HK_A1",
+        "C34": "Hình dạng tay khi chạm (khuỷu gập, khuỷu ngang vai)",
+        "D34": "Kỹ thuật",
+        "E34": "1.6",
+        "F34": "Khuỷu gập, cánh tay trên nâng gần ngang vai, nắm tay tới tầm đầu mục tiêu tại pha đánh",
+        "G34": "Một trong các dấu hiệu chưa rõ",
+        "H34": "Nhiều dấu hiệu lệch rõ hoặc đấm thành động tác khác",
+        "I34": "Không quan sát đủ: không quy đổi thành 0",
+        "J34": "1.6 * (0.40 * band(elbow_flex_deg, 55, 80, 130, 155) + 0.35 * band(upper_arm_elev_deg, 45, 75, 135, 160) + 0.25 * band(fist_height, -0.15, 0.15, 0.65, 0.90))",
+        "K34": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A35": "hook",
+        "B35": "HK_A2",
+        "C35": "Xoay hông – vai theo đòn",
+        "D35": "Kỹ thuật",
+        "E35": "1.2",
+        "F35": "Quan sát được vai và hông cùng xoay theo đòn trong pha đánh",
+        "G35": "Xoay ít hoặc phối hợp chưa rõ",
+        "H35": "Chủ yếu vung tay, không thấy xoay thân rõ",
+        "I35": "Không quan sát đủ: không quy đổi thành 0",
+        "J35": "1.2 * (0.60 * band(shoulder_rot_deg, 10, 40, 90, 130) + 0.40 * band(hip_rot_deg, 5, 30, 90, 130))",
+        "K35": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A36": "hook",
+        "B36": "PU_A3",
+        "C36": "Thu tay về thế thủ",
+        "D36": "Kỹ thuật",
+        "E36": "0.8",
+        "F36": "Thu tay đấm về vị trí thủ ngay sau pha đánh",
+        "G36": "Thu tay chậm hoặc chưa về hẳn vị trí thủ",
+        "H36": "Tay treo ở điểm đánh hoặc không thấy pha thu tay",
+        "I36": "Không quan sát đủ: không quy đổi thành 0",
+        "J36": "0.8 * map(recovery_ratio, 0.30, 0.80)",
+        "K36": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A37": "hook",
+        "B37": "PU_A4",
+        "C37": "Tay thủ & thăng bằng",
+        "D37": "Kỹ thuật",
+        "E37": "0.4",
+        "F37": "Tay còn lại giữ ở vị trí thủ đã khai báo (cằm hoặc hông), thân không đổ theo đòn",
+        "G37": "Tay còn lại rời vị trí ngắn hoặc thân dao động nhẹ",
+        "H37": "Tay còn lại hạ/rời vùng thủ kéo dài hoặc mất trụ",
+        "I37": "Không quan sát đủ: không quy đổi thành 0",
+        "J37": "0.4 * trung bình có trọng số [0.50 · map(guard_hand_imp, 0.95, 0.55); 0.25 · (0.5 · map(trunk_lean_deg, 35, 15) + 0.5 · map(hip_sway, 0.20, 0.08)); 0.25 · map(guard_start, 0.90, 0.55) nếu thấy thủ ban đầu]",
+        "K37": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A38": "hook",
+        "B38": "PX_E1",
+        "C38": "Tốc độ",
+        "D38": "Biểu hiện",
+        "E38": "2",
+        "F38": "Nhanh, dứt khoát so với bộ clip neo cùng điều kiện",
+        "G38": "Tốc độ trung gian so với clip neo",
+        "H38": "Chậm rõ so với clip neo",
+        "I38": "Không quan sát đủ: không quy đổi thành 0",
+        "J38": "2.0 * map(peak_speed, 3.5, 8.0)",
+        "K38": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A39": "hook",
+        "B39": "PX_E2",
+        "C39": "Lực (xoay thân truyền lực)",
+        "D39": "Biểu hiện",
+        "E39": "1.6",
+        "F39": "Thân xoay dứt khoát cùng lúc ra đòn, lực truyền từ chân – hông – vai",
+        "G39": "Có xoay thân nhưng chậm hoặc lệch nhịp",
+        "H39": "Không thấy xoay thân góp lực",
+        "I39": "Không quan sát đủ: không quy đổi thành 0",
+        "J39": "1.6 * map(peak_rot_speed, 80, 300)",
+        "K39": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A40": "hook",
+        "B40": "PX_E3",
+        "C40": "Dứt khoát (thời gian ra đòn)",
+        "D40": "Biểu hiện",
+        "E40": "1.4",
+        "F40": "Ra đòn gọn, không lấy đà dài",
+        "G40": "Có lấy đà hoặc chần chừ ngắn",
+        "H40": "Lấy đà dài, lộ ý đồ rõ",
+        "I40": "Không quan sát đủ: không quy đổi thành 0",
+        "J40": "1.4 * map(exec_time, 0.90, 0.35)",
+        "K40": "Đề xuất; cần HLV xác nhận"
+      },
+      {
+        "A41": "hook",
+        "B41": "PX_E4",
+        "C41": "Độ mượt",
+        "D41": "Biểu hiện",
+        "E41": "1",
+        "F41": "Các pha nối liên tục, không khựng hoặc đổi hướng thừa",
+        "G41": "Có một đoạn khựng hoặc chỉnh nhỏ",
+        "H41": "Khựng hoặc chỉnh hướng nhiều lần",
+        "I41": "Không quan sát đủ: không quy đổi thành 0",
+        "J41": "1.0 * map(smoothness, 0.35, 0.80)",
+        "K41": "Đề xuất; cần HLV xác nhận"
+      }
+    ],
+    "Quy_chuan_dataset": [
+      {
+        "A1": "quy_chuan_dataset_v0.2"
+      },
+      {
+        "A2": "Nguồn: bản v0.1 (outputs/scoring/dataset_standard_vi/quy_chuan_dataset_v0.1.md — file này không có trong repo) và cập nhật v0.2 cho khớp code đã commit (TKD-Kick3_Zenodo_Materials_20260526_153619/code, commit a87bbb5)."
+      },
+      {
+        "A3": "Quy chuẩn dataset động tác — bản đề xuất v0.2 (khớp code hiện tại)"
+      },
+      {
+        "A4": "Mục đích và phạm vi"
+      },
+      {
+        "A5": "Bộ này dùng thu video, trích pose và gán nhãn chất lượng. Phạm vi cốt lõi (có rubric chuyên gia): front, roundhouse, axe, side, hook. Model nhận dạng mặc định của code (LSTM 3 lớp của tác giả) chỉ nhận front / roundhouse / axe; side và hook phải chấm bằng --action hoặc train model mới (train_actions.py). Code còn 19 luật khác (straight và 18 luật mở rộng, xem Luat_cham_trong_code) — có điểm tự động nhưng chưa có rubric chuyên gia. Đây là quy ước dataset xây dựng từ luật project và các mô tả quan sát đề xuất; chưa phải quy chuẩn thi đấu hay tiêu chuẩn kỹ thuật được HLV phê duyệt. Các mức 0/1/2 trong rubric là đề xuất mới, không phải mức đã có trong code."
+      },
+      {
+        "A6": "Nguồn đối chiếu (code đã commit): code/scripts/scoring_api.py (luật đá của tác giả); action_scorers.py (gọi luật, kick_window, fix_leg); punch_scoring.py (hook, straight); scorers_*.py và hand_scoring.py (luật mở rộng); infer_action.py; score_segments.py; code/PUNCH_SCORING.md; code/OTHER_TECHNIQUES_SCORING.md. Trọng số giữ 4 điểm kỹ thuật + 6 điểm biểu hiện. Không dùng scripts/scoring_rules.py (legacy) và TKD-Kick3_work/scripts/hook_scoring.py (luật hook cũ)."
+      },
+      {
+        "A7": "1. Đơn vị dữ liệu và phạm vi động tác"
+      },
+      {
+        "A8": "Một clip = một người, một lần thực hiện, một nhãn động tác, đủ chuẩn bị → thực hiện → thu hồi/kết thúc. Video dài phải có source_video_id và khoảng frame (source_frame_start/end) để truy về gốc. Cú đá và cú đấm có side=left/right theo bên cơ thể người tập; luật hook của code chấm được cả hai tay. Code tự nhận chân/tay thực hiện nên side dùng để kiểm tra (so với detected_side). Không tự lật ảnh mà giữ nguyên nhãn."
+      },
+      {
+        "A9": "Động tác",
+        "B9": "Các pha cần có",
+        "C9": "Vùng phải nhìn rõ",
+        "D9": "Điểm chú ý khi gán nhãn"
+      },
+      {
+        "A10": "front",
+        "B10": "Chuẩn bị → nâng gối → duỗi/đá → thu → kết thúc",
+        "C10": "Hông, gối, cổ chân hai bên, vai và cổ tay",
+        "D10": "Tách pha nâng gối khỏi pha duỗi"
+      },
+      {
+        "A11": "roundhouse",
+        "B11": "Chuẩn bị → lên gối/chuyển hướng → vung/đá → thu → đặt chân",
+        "C11": "Toàn thân, chân đá và chân trụ",
+        "D11": "Đường đá cong có chủ đích; không coi càng thẳng càng đúng kỹ thuật. Ghi rõ có xoay gót chân trụ và hông — pose 13 khớp không có bàn chân nên chỉ quan sát gián tiếp."
+      },
+      {
+        "A12": "axe",
+        "B12": "Chuẩn bị → nâng chân → đỉnh nâng → chẻ xuống → kết thúc",
+        "C12": "Hông, chân đá, chân trụ và tay",
+        "D12": "Đỉnh nâng và pha đánh xuống là hai mốc khác nhau. AX_A1 thưởng đường nâng thẳng: biến thể nâng vòng trong/ngoài đánh giá theo biến thể."
+      },
+      {
+        "A13": "side",
+        "B13": "Chuẩn bị → thu gối/chuyển hướng → đẩy chân → thu → kết thúc",
+        "C13": "Toàn thân, hông, gối và cổ chân",
+        "D13": "Lớp chưa có trong model mặc định (chấm bằng --action side). Thân – hông – gót chân đá thẳng hàng khi duỗi; xoay chân trụ."
+      },
+      {
+        "A14": "hook",
+        "B14": "Thủ → xoay/đưa tay → pha đánh → thu tay → thủ",
+        "C14": "Đầu, hai vai, khuỷu/cổ tay, hông và chân trụ",
+        "D14": "strike_frame chỉ là pha đánh quan sát được, không khẳng định có tiếp xúc. Code đặt điểm chạm = lúc khuỷu nâng cao nhất (3D)."
+      },
+      {
+        "A15": "2. Quy trình quay đề xuất"
+      },
+      {
+        "A16": "- Quay tốc độ thực, camera cố định, không zoom/pan, không chỉnh tốc độ và không nội suy frame. Ghi FPS thực và độ phân giải, ưu tiên FPS hằng định."
+      },
+      {
+        "A17": "- Profile thu ban đầu đề xuất: 1920×1080, 60 fps nếu thiết bị đáp ứng; nếu 30 fps thì ghi thành profile riêng và giữ metadata. Đây là cấu hình thu đề xuất, không phải yêu cầu đã được code kiểm chứng. Lưu ý code: EX_E4 (smoothness của luật đá) tính bằng px/s² nên phụ thuộc cả độ phân giải và FPS; cửa sổ cắt của tác giả có ngưỡng tối thiểu 2 px/frame. Hiệu chỉnh và so sánh điểm tách theo profile (độ phân giải × FPS)."
+      },
+      {
+        "A18": "- Thấy toàn thân và đường chuyển động chân/tay, có khoảng trống quanh người; không để bàn chân/cổ tay ra ngoài hình. Ánh sáng đủ để giảm nhòe, tránh vật che và người khác giao cắt."
+      },
+      {
+        "A19": "- Giữ khoảng chuẩn bị và kết thúc khoảng 0,5–1 giây mỗi phía trong bản video gốc. Lưu cả video gốc và khoảng action đã cắt; không thay đổi FPS sau cắt."
+      },
+      {
+        "A20": "- Thu các view front/oblique/side (chính diện/chéo/ngang); định nghĩa camera_angle_deg: 0° chính diện người ở tư thế bắt đầu, 90° nhìn ngang. Mỗi view có metadata riêng; không mặc định scorer 2D tin cậy như nhau ở mọi view. Với điểm tự động hiện tại: đòn đá (2D, chuẩn hóa theo bề rộng vai/hông) nên chấm từ view chéo ~45°; view ngang 90° làm vai chồng nhau nên số đo bị phóng to; RH_A1 (đá vòng cầu) mất gần hết điểm ở view chính diện. Luật đấm / kỹ thuật tay / tấn / bộ pháp dùng 3D world của MediaPipe ước lượng từ 1 camera: tốt nhất chính diện hoặc chéo ~45°; trung bình tấn phải chính diện (quay nghiêng thì code không chấm); tấn trước dài tự chuyển sang đo 2D khi quay nghiêng."
+      },
+      {
+        "A21": "- Với nghiên cứu nhiều view, có ít nhất một view nhìn đủ tiêu chí đang gán nhãn. Tiêu chí bị che ở view khác phải NA hoặc liên kết nhãn đa camera bằng capture_group_id."
+      },
+      {
+        "A22": "- Khai báo target_zone (low/mid/high/custom), độ cao mục tiêu nếu đo được, tư thế bắt đầu và kết thúc. Không coi mọi người phải đá cùng độ cao tuyệt đối; giữ thông tin mục tiêu để HLV đánh giá phù hợp. Điểm tự động không đọc target_zone: luật đá luôn thưởng độ cao (FR/RH/SD/AX_A2, EX_E3). Chỉ so điểm tự động giữa các clip cùng target_zone; đòn đá thấp có chủ đích chấm bằng side_low / roundhouse_low."
+      },
+      {
+        "A23": "3. Phân bố mẫu cần thu"
+      },
+      {
+        "A24": "Thu cả mẫu tốt, lỗi nhẹ, lỗi rõ và mẫu hỗn hợp; không chỉ quay người thực hiện đúng. Đa dạng người tập, mức kinh nghiệm, phiên quay, trang phục, bối cảnh, view và bên thực hiện đối với đá. Chất lượng kỹ thuật và chất lượng hình ảnh là hai nhãn riêng: một động tác sai nhưng quay rõ vẫn là mẫu hữu ích."
+      },
+      {
+        "A25": "Bảng kế hoạch mỗi ô: động tác × người × bên hợp lệ × view × phiên. Đề xuất pilot 3–5 lần lặp mỗi ô với người có khả năng thực hiện; số người và quy mô cuối cùng phải chốt sau pilot, không coi số clip lặp là thay thế cho số người độc lập. Không yêu cầu người tập cố làm lỗi gây mất kiểm soát; ưu tiên lỗi tự nhiên và mẫu do HLV lựa chọn."
+      },
+      {
+        "A26": "Có thể thu thêm walking/standing/other và clip nhiều động tác để đánh giá đầu vào ngoài phạm vi. Lưu ở tập riêng: pipeline hiện tại chưa có lớp unknown/other, nên không đưa trực tiếp vào training mà chưa cập nhật nhãn/mô hình."
+      },
+      {
+        "A27": "4. Quy ước gán nhãn kỹ thuật"
+      },
+      {
+        "A28": "Rubric_40_tieu_chi chứa 40 dòng cho 5 động tác cốt lõi, mỗi động tác 8 tiêu chí; mã tiêu chí trùng mã trong code (hook: HK_A1, HK_A2, PU_A3, PU_A4, PX_E1–E4). Với từng tiêu chí: 2=đạt mô tả, 1=đạt một phần, 0=lỗi rõ; NA=không đủ quan sát. Nhãn 0 không có nghĩa video hỏng. Không suy ra nhãn chuyên gia từ điểm model hoặc từ ngưỡng scorer."
+      },
+      {
+        "A29": "HLV cần duyệt rubric và chọn clip neo 0/1/2 cho từng tiêu chí trước khi gán nhãn hàng loạt. Tốc độ, độ bộc phát và độ mượt phải so với clip neo cùng điều kiện quay; không suy ra lực hay công suất cơ sinh học từ video. Với hook, các vùng trong PunchRanges (góc khuỷu 80–130°, nâng cánh tay 75–135°, đo 3D) chỉ là ngưỡng đang có trong code; không dùng làm chân lý độc lập để duyệt mọi góc quay."
+      },
+      {
+        "A30": "Mỗi clip nên có hai người gán nhãn độc lập, không thấy điểm tự động và không thấy nhãn nhau. Lưu cả hai bản, frame bằng chứng và độ chắc chắn. Bất đồng được HLV phân xử, giữ lịch sử. Báo cáo độ đồng thuận theo tiêu chí và sai khác điểm tổng; chưa đặt ngưỡng đạt khi chưa có pilot."
+      },
+      {
+        "A31": "Điểm tham chiếu đề xuất: criterion_points = max_points × rating / 2. Tổng kỹ thuật tối đa 4, biểu hiện tối đa 6. Đây là quy đổi rubric đề xuất, không phải công thức scorer. Chỉ ghi tổng /10 khi đủ cả 8 tiêu chí; có NA thì để trống tổng, không cộng NA thành 0 và không tự chuẩn hóa phần còn lại. reference_total_10 chỉ ghi một lần cho mỗi clip trong bảng nhãn cuối (dòng tiêu chí đầu tiên); không cộng cột này qua các dòng. (Trong code: mục không đánh giá được của luật đấm / kỹ thuật tay / tấn / bộ pháp được quy đổi theo tỉ lệ; luật đá của tác giả không có NA.)"
+      },
+      {
+        "A32": "error_tags dùng mã tiêu chí làm tiền tố, ví dụ FR_A1:missing_chamber; FR_A4:guard_drop; HK_A3:guard_drop. Một clip có thể có nhiều lỗi; ghi nhiều tag ngăn bởi dấu chấm phẩy. Nhầm loại động tác phải sửa technique hoặc đưa vào other, không chỉ trừ điểm kỹ thuật."
+      },
+      {
+        "A33": "5. Kiểm tra chất lượng đầu vào"
+      },
+      {
+        "A34": "quality_status ∈ accepted/review/rejected; scorable ∈ yes/no/review."
+      },
+      {
+        "A35": "- accepted: một người thực hiện, đúng một động tác đã xác định, đủ pha, không cắt chi quan trọng, FPS truy được, khớp cần thiết nhìn rõ để đánh giá."
+      },
+      {
+        "A36": "- review: che/nhòe/mất khớp một phần, mốc pha khó xác định, view không đủ kết luận một tiêu chí. Dùng NA cho tiêu chí không quan sát được; chuyên gia quyết định scorable."
+      },
+      {
+        "A37": "- rejected: file hỏng, không xác định người/động tác, mất phần chính của pha đánh hoặc không truy được thời gian. Giữ log lý do, không xóa âm thầm."
+      },
+      {
+        "A38": "Hành vi hiện tại của code: luật đá mask vis<0.2; has_enough (tỉ lệ frame thấy cổ chân đá ≥ 0.35 và ≥ 20 frame) chỉ sinh cảnh báo 'Cổ chân bị che', không từ chối chấm. Luật đấm / kỹ thuật tay cảnh báo khi cổ tay thấy rõ (vis > 0.5) ở < 60% frame và trả valid = False khi không thấy động tác trọn vẹn; luật tấn trả valid = False khi không có đoạn đứng yên ≥ 0.5 s, đã ra khỏi tấn hoặc (trung bình tấn) quay nghiêng. extract_pose đặt invalid_for_scoring = 1 khi người thứ hai cử động ≥ 85% người chính (có thể chọn nhầm người) và infer_action.py cảnh báo. Đây là hành vi hiện tại, không phải chuẩn nghiệm thu dataset. Không đặt ngưỡng vis mới thành quy tắc cứng trước khi pilot kiểm chứng. Ghi invalid_for_scoring vào Mau_diem_tu_dong; đừng coi việc scorer trả được số là dữ liệu hợp lệ."
+      },
+      {
+        "A39": "6. Định dạng pose tương thích"
+      },
+      {
+        "A40": "Mỗi NPZ (infer_action.py --save_pose, hoặc pose_cache của score_segments.py) có: kpts float32 (T,13,2) pixel, vis float32 (T,13) trong [0,1], world float32 (T,13,3) mét, gốc ở hông (MediaPipe pose_world_landmarks, y hướng xuống), fps, width, height, n_tracks, multi_person, invalid_for_scoring. world bắt buộc cho luật đấm, kỹ thuật tay, tấn, bộ pháp; luật đá chỉ dùng kpts. Tọa độ ảnh: y tăng xuống dưới; giữ cùng tỷ lệ x/y và không trộn tọa độ pixel với tọa độ chuẩn hóa. Ghi phiên bản extractor (scoring_version) trong metadata. Nếu đổi kích thước ảnh, ghi phép biến đổi và áp dụng nhất quán."
+      },
+      {
+        "A41": "Thứ tự khớp: 0 HEAD, 1 LS, 2 RS, 3 LE, 4 RE, 5 LW, 6 RW, 7 LH, 8 RH, 9 LK, 10 RK, 11 LA, 12 RA. L/R theo người tập. Không dùng (0,0) làm điểm hợp lệ cho khớp thiếu; dùng visibility phù hợp. Giữ mask và thời gian gốc, không xóa frame thiếu rồi giữ nguyên FPS. Không resample trước khi tính tốc độ/gia tốc scoring; nếu cần resample cho nhận diện, tạo bản riêng với metadata thời gian đúng. Code ghi NaN + vis = 0 cho frame không thấy người."
+      },
+      {
+        "A42": "Cắt đoạn: luật đấm / kỹ thuật tay / tấn / bộ pháp chấm trên cả clip (tự tìm pha bên trong). Luật đá: --kick_window ankle cắt theo hàm của tác giả (_compute_rel_speed_window) — mục thu chân A3 gần như luôn 0; dataset dùng --kick_window none --fix_leg (cả clip, có 0,5–1 s đầu/cuối). Cửa sổ đưa vào model nhận dạng (ankle / motion / wrist / none) ghi trong checkpoint, tách khỏi phần chấm điểm. Scorer đá nhận thêm z nhưng bỏ z."
+      },
+      {
+        "A43": "7. Chia train/validation/test và hiệu chỉnh"
+      },
+      {
+        "A44": "Bắt buộc có participant_id, session_id và source_video_id. Chia theo người trước khi tăng cường dữ liệu; mọi clip, view, phiên, đoạn cắt và biến thể của cùng người phải nằm cùng split nếu mục tiêu là đánh giá trên người mới. Các camera đồng bộ cùng lần thực hiện dùng chung capture_group_id. Kiểm tra không có video gốc hoặc bản sao xuyên split."
+      },
+      {
+        "A45": "Đề xuất tỷ lệ mục tiêu 70/15/15 theo người, cân đối lớp khi khả thi. Ít người thì dùng đánh giá theo nhóm/người phù hợp; không khẳng định participant-independent khi thiếu metadata. Nếu người xuất hiện trong nhiều video, source_video_id riêng không đủ ngăn rò rỉ."
+      },
+      {
+        "A46": "Chỉ dùng train để ước lượng ngưỡng scoring; dùng validation để chọn cấu hình; khóa test trước hiệu chỉnh. Không dùng clip test làm reference rồi báo cáo độ đúng trên chính test. Ngưỡng hiện tại nằm cố định trong code: ScoreRanges (scoring_api.py), PunchRanges (punch_scoring.py), HandRanges (scorers_hands.py), StanceRanges, DrillRanges, LOW_BAND (scorers_kicks_extra.py); khi sửa ngưỡng chỉ dùng clip train và ghi ranges_version. Luật hook cũ (hook_scoring.py --calibrate) đã hiệu chỉnh trên cả 24 clip (16 train + 4 val + 4 test, n_reference = 24) — không dùng ngưỡng đó để đánh giá."
+      },
+      {
+        "A47": "Điểm tự động lưu trong Mau_diem_tu_dong (một dòng/clip/tiêu chí, ghi action, scoring_version = commit code, kick_window, fix_leg, detected_side, criterion_assessable); nhãn chuyên gia lưu riêng. Đánh giá scorer với nhãn chuyên gia trên test, phân tích theo động tác/view/bên/người và báo cáo tỷ lệ NA, clip bị loại."
+      },
+      {
+        "A48": "8. Các điểm HLV cần xác nhận trước khi dùng chính thức"
+      },
+      {
+        "A49": "- Mô tả 0/1/2 và clip neo cho từng tiêu chí; vùng mục tiêu và tư thế kết thúc phù hợp từng biến thể."
+      },
+      {
+        "A50": "- Đường đá vòng cầu không bị ép thành đường thẳng chỉ vì code có straightness; landing_forward càng lớn không tự đồng nghĩa đặt chân tốt."
+      },
+      {
+        "A51": "- Thu hồi chân/tay theo biến thể đã khai báo, không bắt mọi động tác về đúng một tọa độ ban đầu."
+      },
+      {
+        "A52": "- Trọng số hiện có tính độ cao ở cả kỹ thuật và biểu hiện (luật đá), xoay vai ở cả HK_A2 và PX_E2 (luật đấm); chuyên gia quyết định có giữ khi đánh giá độc lập."
+      },
+      {
+        "A53": "- Độ mượt scorer đá phụ thuộc độ phân giải và FPS; trên dữ liệu public của tác giả EX_E1–E3 gần như luôn tối đa, EX_E4 ≈ 0 nên Biểu hiện tự động của đòn đá ≈ 5/6 với mọi clip. Ngưỡng tốc độ, độ cao và đấm hiện là ngưỡng project, chưa phải chuẩn phổ quát."
+      },
+      {
+        "A54": "9. File và cách bắt đầu"
+      },
+      {
+        "A55": "1. Duyệt Rubric_40_tieu_chi với HLV, ghi rubric_version và chọn clip neo."
+      },
+      {
+        "A56": "2. Quay pilot, điền Mau_clip_co_ban / Mau_clip_HLV (một dòng/clip); trường chưa đo để trống, không đoán. split để trống trước khi chia nhóm."
+      },
+      {
+        "A57": "3. Trích pose (infer_action.py --save_pose, có world 3D), kiểm tra chất lượng và mốc pha; chấm tự động với --kick_window none --fix_leg."
+      },
+      {
+        "A58": "4. Điền Mau_nhan_chuyen_gia (một dòng/clip/người chấm/tiêu chí); chốt nhãn trong Mau_nhan_chot."
+      },
+      {
+        "A59": "5. Chia theo người, hiệu chỉnh chỉ trên train, lưu điểm tự động riêng (Mau_diem_tu_dong) để so sánh."
+      },
+      {
+        "A60": "Video gốc và ảnh nhận diện được người tập không đưa lên kho công khai. participant_id là mã ẩn danh; bảng đối chiếu danh tính và hồ sơ đồng ý lưu riêng, không đi kèm bản dataset chia sẻ."
+      },
+      {
+        "A62": "10. Khớp với code — lệnh, tùy chọn và tên động tác"
+      },
+      {
+        "A63": "- Chấm 1 clip: python code/scripts/infer_action.py clip.mp4 --action <action> [--no_model] --kick_window none --fix_leg --out ket_qua.json --save_pose pose.npz. Không có --action thì model 3 lớp của tác giả nhận dạng (chỉ front / roundhouse / axe)."
+      },
+      {
+        "A64": "- Chấm nhiều lần thực hiện trong video dài (vd video bài giảng): score_segments.py --segments doan.csv (video,start,end,action,label,side,guard) --root <thư mục video> --pose_cache <thư mục> [--transcode cho video AV1]. Mặc định chấm đá với kick_window none + fix_leg."
+      },
+      {
+        "A65": "- technique trong manifest dùng đúng tên --action của code (Luat_cham_trong_code). Tên thư mục tiếng Việt không dấu được ánh xạ qua ALIASES (vd dam_moc, dam_vong → hook; da_sau → back; gat_thap → low_block)."
+      },
+      {
+        "A66": "- Luật đấm có --guard chin (thủ ở cằm, mặc định) / waist (nắm tay ở hông, kiểu Poomsae) và --side L/R; ghi lựa chọn vào execution_variant."
+      },
+      {
+        "A67": "- scoring_version = commit git của code chấm (hiện tại a87bbb5); ranges_version = commit/ngày sửa ngưỡng."
+      }
+    ],
+    "Checklist": [
+      {
+        "A1": "CHECKLIST TRƯỚC VÀ TRONG BUỔI QUAY"
+      },
+      {
+        "A2": "Chọn trạng thái tại cột D. Danh sách trích đầy đủ từ hướng dẫn HLV, không phải kết quả nghiệm thu đã có."
+      },
+      {
+        "A3": "STT",
+        "B3": "Mục nguồn",
+        "C3": "Nội dung cần kiểm tra",
+        "D3": "Trạng thái",
+        "E3": "Người kiểm tra",
+        "F3": "Ghi chú"
+      },
+      {
+        "A4": "1",
+        "B4": "B. Checklist chung tại điểm quay",
+        "C4": "Ghi mã người, phiên, lần thực hiện; thống nhất biến thể, chân/tay thực hiện, vùng mục tiêu, tư thế đầu/cuối.",
+        "D4": "Chưa kiểm tra"
+      },
+      {
+        "A5": "2",
+        "B5": "B. Checklist chung tại điểm quay",
+        "C5": "Chốt đánh gió hay đánh đích; ghi điều kiện này cho từng clip. Không trộn hai điều kiện mà thiếu metadata. Nếu có đích/người giữ đích, bảo đảm không che khớp chính hoặc gây nhầm người cần theo dõi.",
+        "D5": "Chưa kiểm tra"
+      },
+      {
+        "A6": "3",
+        "B6": "B. Checklist chung tại điểm quay",
+        "C6": "Quay ngang khung hình, camera cố định; đề xuất 1080p/60 fps, hoặc 30 fps thành profile riêng. Quay tốc độ thực; không dùng video slow-motion xuất ra để tính tốc độ.",
+        "D6": "Chưa kiểm tra"
+      },
+      {
+        "A7": "4",
+        "B7": "B. Checklist chung tại điểm quay",
+        "C7": "Camera đặt cân bằng, không nghiêng khung; thử chiều cao khoảng vùng thân để nhìn đủ toàn người, rồi điều chỉnh theo thực địa. Ghi vị trí, chiều cao và góc máy; không áp đặt khoảng cách cố định cho mọi ống kính.",
+        "D7": "Chưa kiểm tra"
+      },
+      {
+        "A8": "5",
+        "B8": "B. Checklist chung tại điểm quay",
+        "C8": "Thấy đầu, hai tay, hông, gối, bàn chân và toàn bộ vùng quét chân/tay; khoảng trống đủ tại điểm vươn xa nhất.",
+        "D8": "Chưa kiểm tra"
+      },
+      {
+        "A9": "6",
+        "B9": "B. Checklist chung tại điểm quay",
+        "C9": "Nền ít nhiễu, ánh sáng đủ, không có người giao cắt; trang phục giúp phân biệt tay/chân và hai bên cơ thể.",
+        "D9": "Chưa kiểm tra"
+      },
+      {
+        "A10": "7",
+        "B10": "B. Checklist chung tại điểm quay",
+        "C10": "Đánh dấu vị trí đứng và hướng mục tiêu. Giữ cùng hình học quay trong một block hiệu chỉnh; đổi camera/view thì ghi block mới.",
+        "D10": "Chưa kiểm tra"
+      },
+      {
+        "A11": "8",
+        "B11": "B. Checklist chung tại điểm quay",
+        "C11": "Bắt đầu giữ tư thế 0,5–1 giây → thực hiện một động tác ở tốc độ thực → giữ tư thế kết thúc 0,5–1 giây. Không dừng giữa các pha để tạo dáng trong clip scoring.",
+        "D11": "Chưa kiểm tra"
+      },
+      {
+        "A12": "9",
+        "B12": "B. Checklist chung tại điểm quay",
+        "C12": "Một clip một lần thực hiện. Có thể quay liên tục nhưng mỗi lần phải đủ khoảng nghỉ và có mốc cắt riêng.",
+        "D12": "Chưa kiểm tra"
+      },
+      {
+        "A13": "10",
+        "B13": "B. Checklist chung tại điểm quay",
+        "C13": "Xem lại thử ngay: khớp có ra khỏi khung/nhòe/che nhau không; các pha có đủ không. Thử pose extraction trước khi quay số lượng lớn.",
+        "D13": "Chưa kiểm tra"
+      },
+      {
+        "A14": "11",
+        "B14": "I. Nghiệm thu ngay sau mỗi block",
+        "C14": "Xem đủ chuẩn bị → đánh → thu/kết thúc; có thể nhận diện loại và bên.",
+        "D14": "Chưa kiểm tra"
+      },
+      {
+        "A15": "12",
+        "B15": "I. Nghiệm thu ngay sau mỗi block",
+        "C15": "Pha đánh thấy rõ khớp quan trọng, không ra khỏi hình hoặc nhòe đến mức không kết luận được.",
+        "D15": "Chưa kiểm tra"
+      },
+      {
+        "A16": "13",
+        "B16": "I. Nghiệm thu ngay sau mỗi block",
+        "C16": "Ghi target_zone, start_stance/end_stance, camera_view, người/phiên/video gốc.",
+        "D16": "Chưa kiểm tra"
+      },
+      {
+        "A17": "14",
+        "B17": "I. Nghiệm thu ngay sau mỗi block",
+        "C17": "Ghi thêm dataset_role, execution_variant, contact_mode, requested_condition, actual_condition, camera_setup_id, take_number và apex_frame khi cần; các trường này bổ sung vào manifest hiện có.",
+        "D17": "Chưa kiểm tra"
+      },
+      {
+        "A18": "15",
+        "B18": "I. Nghiệm thu ngay sau mỗi block",
+        "C18": "Clip làm chuẩn được HLV duyệt và gán nhãn từng tiêu chí; không chọn chỉ vì scorer cho điểm cao.",
+        "D18": "Chưa kiểm tra"
+      },
+      {
+        "A19": "16",
+        "B19": "I. Nghiệm thu ngay sau mỗi block",
+        "C19": "Clip training lỗi vẫn giữ nếu hình tốt và nhãn đúng. Clip thiếu quan sát giữ trạng thái review/NA theo tiêu chí.",
+        "D19": "Chưa kiểm tra"
+      },
+      {
+        "A20": "17",
+        "B20": "I. Nghiệm thu ngay sau mỗi block",
+        "C20": "Lưu clip/raw pose/FPS gốc. Không xóa frame mất khớp rồi giữ nguyên FPS; không resample bản scoring theo số frame cố định.",
+        "D20": "Chưa kiểm tra"
+      },
+      {
+        "A21": "18",
+        "B21": "I. Nghiệm thu ngay sau mỗi block",
+        "C21": "Chia train/val/test theo người trước hiệu chỉnh; clip cùng người và các view cùng lần thực hiện cùng split. Chỉ clip train được dùng hiệu chỉnh ngưỡng.",
+        "D21": "Chưa kiểm tra"
+      },
+      {
+        "A22": "19",
+        "B22": "K8. Checklist HLV/người quay trước khi bắt đầu",
+        "C22": "Tất cả camera cùng thấy người, tín hiệu đồng bộ và vùng chuyển động cần thiết.",
+        "D22": "Chưa kiểm tra"
+      },
+      {
+        "A23": "20",
+        "B23": "K8. Checklist HLV/người quay trước khi bắt đầu",
+        "C23": "Camera ID, vị trí, view, hướng mục tiêu và setup ID đã ghi.",
+        "D23": "Chưa kiểm tra"
+      },
+      {
+        "A24": "21",
+        "B24": "K8. Checklist HLV/người quay trước khi bắt đầu",
+        "C24": "Đã thử một lần biên độ lớn nhất; không cắt chân/tay ở bất kỳ camera nào.",
+        "D24": "Chưa kiểm tra"
+      },
+      {
+        "A25": "22",
+        "B25": "K8. Checklist HLV/người quay trước khi bắt đầu",
+        "C25": "Video thử phát lại đủ nét, FPS/timebase đọc được, không tự chuyển lens/zoom.",
+        "D25": "Chưa kiểm tra"
+      },
+      {
+        "A26": "23",
+        "B26": "K8. Checklist HLV/người quay trước khi bắt đầu",
+        "C26": "Tín hiệu đầu có trên mọi camera; đã thống nhất take_number.",
+        "D26": "Chưa kiểm tra"
+      },
+      {
+        "A27": "24",
+        "B27": "K8. Checklist HLV/người quay trước khi bắt đầu",
+        "C27": "Mỗi lượt thực hiện có đủ chuẩn bị và kết thúc, ghi đúng chân/tay.",
+        "D27": "Chưa kiểm tra"
+      },
+      {
+        "A28": "25",
+        "B28": "K8. Checklist HLV/người quay trước khi bắt đầu",
+        "C28": "Tín hiệu cuối có trên mọi camera; kiểm tra drift trước khi thu block tiếp.",
+        "D28": "Chưa kiểm tra"
+      },
+      {
+        "A29": "26",
+        "B29": "K8. Checklist HLV/người quay trước khi bắt đầu",
+        "C29": "Video gốc được giữ, nhóm đồng bộ và nhãn thiếu quan sát được ghi đầy đủ.",
+        "D29": "Chưa kiểm tra"
+      },
+      {
+        "A30": "27",
+        "B30": "Bổ sung v0.2 — khớp code",
+        "C30": "Ghi side đúng tay/chân thực hiện; sau khi chấm, so detected_side của code với side — lệch thì đánh dấu review.",
+        "D30": "Chưa kiểm tra"
+      },
+      {
+        "A31": "28",
+        "B31": "Bổ sung v0.2 — khớp code",
+        "C31": "Chấm đòn đá trên cả clip: infer_action.py --kick_window none --fix_leg (hoặc score_segments.py); ghi kick_window, fix_leg vào Mau_diem_tu_dong.",
+        "D31": "Chưa kiểm tra"
+      },
+      {
+        "A32": "29",
+        "B32": "Bổ sung v0.2 — khớp code",
+        "C32": "Lưu pose có world (T,13,3) bằng infer_action.py --save_pose — bắt buộc cho luật đấm, kỹ thuật tay, tấn, bộ pháp.",
+        "D32": "Chưa kiểm tra"
+      },
+      {
+        "A33": "30",
+        "B33": "Bổ sung v0.2 — khớp code",
+        "C33": "Ghi invalid_for_scoring của pose; = 1 thì kiểm tra người được chọn trước khi dùng điểm tự động.",
+        "D33": "Chưa kiểm tra"
+      },
+      {
+        "A34": "31",
+        "B34": "Bổ sung v0.2 — khớp code",
+        "C34": "Không dùng EX_E1–E4 tự động của đòn đá để đánh giá biểu hiện; chỉ so điểm tự động giữa clip cùng target_zone, cùng view, cùng profile độ phân giải × FPS.",
+        "D34": "Chưa kiểm tra"
+      }
+    ]
+  }
+}
