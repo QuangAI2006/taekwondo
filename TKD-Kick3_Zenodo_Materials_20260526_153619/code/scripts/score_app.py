@@ -30,6 +30,8 @@ SCRIPTS_DIR = Path(__file__).resolve().parent
 PKG_ROOT = SCRIPTS_DIR.parents[1]
 sys.path.insert(0, str(SCRIPTS_DIR))
 
+from filename_action import detect_filename_action
+
 INFER = SCRIPTS_DIR / "infer_action.py"
 OUT_ROOT = PKG_ROOT / "outputs" / "app_scores"
 VIDEO_TYPES = [("Video", "*.mp4 *.mov *.avi *.mkv"), ("Tất cả", "*.*")]
@@ -94,12 +96,15 @@ class App(tk.Tk):
 
         self.var_action = tk.StringVar()
         self.var_video = tk.StringVar()
+        self.var_detection = tk.StringVar(value="Tự chọn động tác theo tên video; có thể đổi lại trong danh sách.")
+        self._detect_after = None
         self.var_side = tk.StringVar(value="Tự nhận")
         self.var_guard = tk.StringVar(value="chin")
         self.var_fixleg = tk.BooleanVar(value=False)
         self.var_window = tk.BooleanVar(value=False)
         self.var_status = tk.StringVar(value=f"Có {len(actions)} động tác có luật chấm.")
         self._build()
+        self.var_video.trace_add("write", self._schedule_detection)
 
     # ---------- giao diện ----------
     def _build(self) -> None:
@@ -130,6 +135,8 @@ class App(tk.Tk):
         box.pack(fill="x")
         ttk.Entry(box, textvariable=self.var_video).pack(side="left", fill="x", expand=True, padx=6, pady=6)
         ttk.Button(box, text="Chọn video…", command=self._pick_video).pack(side="left", padx=6)
+        ttk.Label(right, textvariable=self.var_detection, wraplength=650,
+                  foreground="#1565c0").pack(fill="x", padx=6, pady=4)
 
         opt = ttk.LabelFrame(right, text="Tùy chọn (chỉ hiện với động tác dùng đến)")
         opt.pack(fill="x", pady=6)
@@ -198,6 +205,31 @@ class App(tk.Tk):
         p = filedialog.askopenfilename(title="Chọn video động tác", filetypes=VIDEO_TYPES)
         if p:
             self.var_video.set(p)
+
+    def _schedule_detection(self, *_args) -> None:
+        if self._detect_after is not None:
+            self.after_cancel(self._detect_after)
+        self._detect_after = self.after(250, self._detect_video_action)
+
+    def _detect_video_action(self) -> None:
+        from action_scorers import ALIASES
+
+        self._detect_after = None
+        filename = self.var_video.get()
+        if not filename.strip():
+            self.var_detection.set("Tự chọn động tác theo tên video; có thể đổi lại trong danh sách.")
+            return
+        action = detect_filename_action(filename, self.actions, ALIASES)
+        if action is None:
+            self.var_detection.set("Tên video chưa xác định rõ động tác. Hãy chọn động tác trong danh sách.")
+            return
+        item = f"a:{action}"
+        self.tree.selection_set(item)
+        self.tree.focus(item)
+        self.tree.see(item)
+        self._on_select()
+        label = next(label for _, name, label in self.actions if name == action)
+        self.var_detection.set(f"Tự chọn theo tên video: {label}. Có thể đổi lại trong danh sách.")
 
     def _open_dir(self) -> None:
         if self.last_dir and self.last_dir.is_dir():
